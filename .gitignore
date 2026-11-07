@@ -1,0 +1,30 @@
+# Доступы и локальные настройки
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+*.log
+
+# Python
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+*.egg-info/
+build/
+dist/
+
+# Результаты локальных прогонов
+runs/
+outputs/
+
+# Редакторы и ОС
+.idea/
+.vscode/
+.DS_Store
+__MACOSX/
+Thumbs.db
