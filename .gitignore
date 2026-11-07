@@ -28,3 +28,9 @@ outputs/
 .DS_Store
 __MACOSX/
 Thumbs.db
+
+# SDK logs and sample-run outputs
+logs/
+output/
+examples/**/answer.txt
+examples/**/agent-report.json
