@@ -10,6 +10,8 @@ from types import SimpleNamespace
 from unittest.mock import patch
 
 from harness import Budget, Task, TaskTools, atomic_text, load_tasks, run_tasks, solve
+from run_agent import main, resolve_budget
+from scripts.score_examples import score_examples
 
 
 class HarnessTests(unittest.TestCase):
@@ -42,7 +44,55 @@ class HarnessTests(unittest.TestCase):
             tools.execute("write_file", {"path": "test_mylib.py", "content": "wrong"})
         tools.execute("submit_answer", {"answer": "42"})
         self.assertEqual((self.directory / "answer.txt").read_text().strip(), "42")
-        self.assertEqual((self.task.workspace / "answer.txt").read_text().strip(), "42")
+        self.assertFalse((self.task.workspace / "answer.txt").exists())
+
+    def test_meeting_budget_comes_from_environment_and_cli_only_lowers_it(self):
+        self.assertEqual(resolve_budget(environ={}), 100000)
+        self.assertEqual(resolve_budget(environ={"BUDGET": "12345"}), 12345)
+        self.assertEqual(resolve_budget(500, {"BUDGET": "12345"}), 500)
+        self.assertEqual(resolve_budget(200000, {"BUDGET": "12345"}), 12345)
+        for raw in ("bad", "0", "-10", "1.5", ""):
+            with self.assertRaises(ValueError):
+                resolve_budget(environ={"BUDGET": raw})
+
+    def test_skipping_creates_no_answer_and_repeat_run_is_rejected(self):
+        tools = TaskTools(self.task)
+        tools.execute("skip_task", {"reason": "Necessary input is missing"})
+        self.assertFalse((self.directory / "answer.txt").exists())
+        self.assertFalse((self.task.workspace / "answer.txt").exists())
+        atomic_text(self.directory / "answer.txt", "old answer")
+        with patch("run_agent.load_tasks", return_value=[self.task]):
+            self.assertEqual(main(["--tasks-dir", str(self.root)]), 1)
+        self.assertEqual((self.directory / "answer.txt").read_text(), "old answer")
+
+    def test_local_score_uses_references_and_awards_nothing_for_skip(self):
+        reference = self.root / "references"
+        solutions = self.root / "solutions"
+        for name, reward in (("a", 3), ("b", 7)):
+            folder = reference / name
+            folder.mkdir(parents=True)
+            atomic_text(folder / "task.json", json.dumps({"task_id": name, "reward": reward,
+                        "expected": "42", "check": "exact_int"}))
+        atomic_text(solutions / "a" / "answer.txt", "42")
+        report = score_examples(reference, solutions)
+        self.assertEqual((report["score"], report["max_score"], report["passed"]), (3, 10, 1))
+        self.assertEqual(report["tasks"][1]["status"], "no_answer")
+
+    def test_local_coding_score_checks_program_and_rejects_changed_tests(self):
+        reference = self.root / "references" / "coding_1"
+        solution = self.root / "solutions" / "coding_1"
+        atomic_text(reference / "task.json", json.dumps({"task_id": "coding_1", "reward": 2,
+                    "expected": "tests_pass", "check": "unittest"}))
+        tests = "import unittest\nfrom mylib import add\nclass Tests(unittest.TestCase):\n def test_add(self): self.assertEqual(add(2,3),5)\n"
+        atomic_text(reference / "workspace" / "test_mylib.py", tests)
+        atomic_text(solution / "workspace" / "test_mylib.py", tests)
+        atomic_text(solution / "workspace" / "mylib.py", "def add(a,b): return a-b\n")
+        atomic_text(solution / "answer.txt", "DONE")
+        self.assertEqual(score_examples(reference.parent, solution.parent)["score"], 0)
+        atomic_text(solution / "workspace" / "mylib.py", "def add(a,b): return a+b\n")
+        self.assertEqual(score_examples(reference.parent, solution.parent)["score"], 2)
+        atomic_text(solution / "workspace" / "test_mylib.py", "# no tests\n")
+        self.assertEqual(score_examples(reference.parent, solution.parent)["score"], 0)
 
     def test_budget_counts_full_input_and_does_not_double_count_reasoning(self):
         budget = Budget(100)
@@ -124,6 +174,7 @@ class HarnessTests(unittest.TestCase):
         self.assertEqual(report["spent"], 60)
         self.assertEqual(report["results"][0]["status"], "submitted")
         self.assertEqual(requests[1]["messages"][-1]["role"], "tool")
+        self.assertIn("Remaining overall", requests[1]["messages"][1]["content"])
 
 
 if __name__ == "__main__":

@@ -169,10 +169,8 @@ class TaskTools:
             answer = str(arguments["answer"]).strip()
             if not answer or len(answer) > 10000:
                 raise ValueError("Answer must contain 1..10000 characters")
-            # Root is required by the launch example; cwd=workspace by sample instructions.
+            # Organizer clarification of Nov 7: answer goes beside task.json.
             atomic_text(self.task.directory / "answer.txt", answer + "\n")
-            if self.root != self.task.directory:
-                atomic_text(self.root / "answer.txt", answer + "\n")
             self.answer = answer
             return "Answer submitted"
         if name == "skip_task":
@@ -213,8 +211,12 @@ async def solve(task, model, budget, args, deadline):
     status = "step_limit"
     for step in range(args.max_steps):
         available = min(budget.remaining, args.task_budget - (budget.spent - start_spent))
+        budget_message = SystemMessage(content=f"Total starting budget: {budget.limit}. "
+                         f"Remaining overall: {budget.remaining:.1f}; remaining task allowance: {available:.1f}. "
+                         "Units: output tokens plus input tokens / 10. Work within this allowance.")
+        request_messages = [messages[0], budget_message, *messages[1:]]
         # Approximate preflight reserve; the organizer proxy remains authoritative.
-        payload = json.dumps([message.model_dump() for message in messages], ensure_ascii=False)
+        payload = json.dumps([message.model_dump() for message in request_messages], ensure_ascii=False)
         reserve = math.ceil((len(payload.encode("utf-8")) + 4000) / 3 / 10)
         max_output = min(args.max_output, math.floor(available - reserve))
         if max_output < 32:
@@ -224,7 +226,7 @@ async def solve(task, model, budget, args, deadline):
         if remaining_time <= 0:
             status = "time_limit"
             break
-        reply = await asyncio.wait_for(model.invoke(messages, tools=specs, max_tokens=max_output,
+        reply = await asyncio.wait_for(model.invoke(request_messages, tools=specs, max_tokens=max_output,
                                                     temperature=0, timeout=min(120, remaining_time)),
                                        timeout=min(125, remaining_time))
         budget.add(reply.usage_metadata)
