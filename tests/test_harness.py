@@ -126,6 +126,34 @@ class HarnessTests(unittest.TestCase):
         self.assertEqual(result["status"], "budget_limit")
         self.assertFalse((self.directory / "answer.txt").exists())
 
+    def test_plain_text_gets_one_submission_reminder(self):
+        from openjiuwen.core.foundation.llm import AssistantMessage, UsageMetadata
+        from openjiuwen.core.foundation.llm.schema.tool_call import ToolCall
+
+        class Model:
+            def __init__(self, submit):
+                self.calls = 0
+                self.submit = submit
+
+            async def invoke(self, messages, **kwargs):
+                self.calls += 1
+                usage = UsageMetadata(input_tokens=100, output_tokens=10)
+                if self.calls == 1 or not self.submit:
+                    return AssistantMessage(content="The answer is 42", usage_metadata=usage)
+                assert "No answer has been submitted" in messages[-1].content
+                return AssistantMessage(content="", usage_metadata=usage, tool_calls=[
+                    ToolCall(id="submit-1", type="function", name="submit_answer", arguments='{"answer":"42"}')])
+
+        args = SimpleNamespace(max_steps=5, task_budget=1000, max_output=128)
+        model = Model(submit=True)
+        result = asyncio.run(solve(self.task, model, Budget(1000), args, time.monotonic() + 10))
+        self.assertEqual(result["status"], "submitted")
+        self.assertEqual(model.calls, 2)
+        model = Model(submit=False)
+        result = asyncio.run(solve(self.task, model, Budget(1000), args, time.monotonic() + 10))
+        self.assertEqual(result["status"], "no_submission")
+        self.assertEqual(model.calls, 2)
+
     def test_real_openjiuwen_model_against_local_test_api(self):
         requests = []
 

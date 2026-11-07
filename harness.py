@@ -209,6 +209,7 @@ async def solve(task, model, budget, args, deadline):
     start_spent = budget.spent
     trajectory = []
     status = "step_limit"
+    submission_reminded = False
     for step in range(args.max_steps):
         available = min(budget.remaining, args.task_budget - (budget.spent - start_spent))
         budget_message = SystemMessage(content=f"Total starting budget: {budget.limit}. "
@@ -234,6 +235,13 @@ async def solve(task, model, budget, args, deadline):
                            "tool_names": [call.name for call in reply.tool_calls or []]})
         messages.append(reply)
         if not reply.tool_calls:
+            if not submission_reminded:
+                messages.append(UserMessage(content="No answer has been submitted. "
+                    "If the task is complete, call submit_answer with the exact answer. "
+                    "For coding, verify tests pass first, then submit DONE. "
+                    "Otherwise continue using tools, or call skip_task if impossible."))
+                submission_reminded = True
+                continue
             status = "no_submission"
             break
         if budget.remaining <= 0 or time.monotonic() >= deadline:
