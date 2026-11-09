@@ -8,5 +8,5 @@ WORKDIR /app
 COPY requirements.txt ./
 COPY requirements.lock ./
 RUN pip install --no-cache-dir -r requirements.txt -c requirements.lock
-COPY run_agent.py harness.py ./
+COPY run_agent.py harness.py planning.py ./
 ENTRYPOINT ["python", "/app/run_agent.py"]

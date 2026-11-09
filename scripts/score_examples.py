@@ -4,6 +4,7 @@ import json
 import os
 import subprocess
 import sys
+from fractions import Fraction
 from pathlib import Path
 
 
@@ -29,6 +30,11 @@ def score_examples(reference_dir, tasks_dir, task_ids=None):
                 try:
                     result["passed"] = int(actual) == int(task["expected"])
                 except ValueError:
+                    pass
+            elif kind == "exact_fraction":
+                try:
+                    result["passed"] = Fraction(actual) == Fraction(task["expected"])
+                except (ValueError, ZeroDivisionError):
                     pass
             elif kind == "unittest":
                 source = metadata.parent / "workspace"

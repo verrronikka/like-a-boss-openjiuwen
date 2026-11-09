@@ -1,0 +1,3122 @@
+{
+  "model": "qwen3.8-27b-noreason",
+  "planner": "density",
+  "budget": 10000,
+  "spent": 9779.5,
+  "results": [
+    {
+      "task_id": "item_6c762cf996dd6bc5",
+      "status": "submitted",
+      "answer": "Oslo",
+      "skip_reason": null,
+      "spent": 588.6,
+      "trajectory": [
+        {
+          "phase": "feasibility_review",
+          "usage": {
+            "code": 0,
+            "err_msg": "",
+            "prompt": "",
+            "task_id": "",
+            "model_name": "qwen3.8-27b-noreason",
+            "total_latency": 0.0,
+            "first_token_time": "",
+            "request_start_time": "",
+            "input_tokens": 504,
+            "output_tokens": 53,
+            "total_tokens": 557,
+            "cache_tokens": 0,
+            "cache_read_tokens": 0,
+            "cache_miss_tokens": null,
+            "cache_write_tokens": null,
+            "cache_status": "observed",
+            "cache_source": "provider_usage",
+            "cache_authoritative": true,
+            "cache_creation_input_tokens": null,
+            "reasoning_tokens": 0,
+            "input_cost": 0.0,
+            "output_cost": 0.0,
+            "total_cost": 0.0
+          },
+          "review": {
+            "decision": "proceed",
+            "reason": "The provided files contain all necessary links: Person-91 works at Lab-91, Lab-91 is owned by Firm-91, and Firm-91 is located in Oslo."
+          },
+          "raw_review": "{\"reason\": \"The provided files contain all necessary links: Person-91 works at Lab-91, Lab-91 is owned by Firm-91, and Firm-91 is located in Oslo.\", \"decision\": \"proceed\"}",
+          "tool_names": []
+        },
+        {
+          "step": 1,
+          "usage": {
+            "code": 0,
+            "err_msg": "",
+            "prompt": "",
+            "task_id": "",
+            "model_name": "qwen3.8-27b-noreason",
+            "total_latency": 0.0,
+            "first_token_time": "",
+            "request_start_time": "",
+            "input_tokens": 766,
+            "output_tokens": 26,
+            "total_tokens": 792,
+            "cache_tokens": 0,
+            "cache_read_tokens": 0,
+            "cache_miss_tokens": null,
+            "cache_write_tokens": null,
+            "cache_status": "observed",
+            "cache_source": "provider_usage",
+            "cache_authoritative": true,
+            "cache_creation_input_tokens": null,
+            "reasoning_tokens": 0,
+            "input_cost": 0.0,
+            "output_cost": 0.0,
+            "total_cost": 0.0
+          },
+          "tool_names": [
+            "list_files"
+          ]
+        },
+        {
+          "step": 2,
+          "usage": {
+            "code": 0,
+            "err_msg": "",
+            "prompt": "",
+            "task_id": "",
+            "model_name": "qwen3.8-27b-noreason",
+            "total_latency": 0.0,
+            "first_token_time": "",
+            "request_start_time": "",
+            "input_tokens": 826,
+            "output_tokens": 54,
+            "total_tokens": 880,
+            "cache_tokens": 0,
+            "cache_read_tokens": 0,
+            "cache_miss_tokens": null,
+            "cache_write_tokens": null,
+            "cache_status": "observed",
+            "cache_source": "provider_usage",
+            "cache_authoritative": true,
+            "cache_creation_input_tokens": null,
+            "reasoning_tokens": 0,
+            "input_cost": 0.0,
+            "output_cost": 0.0,
+            "total_cost": 0.0
+          },
+          "tool_names": [
+            "read_file",
+            "read_file"
+          ]
+        },
+        {
+          "step": 3,
+          "usage": {
+            "code": 0,
+            "err_msg": "",
+            "prompt": "",
+            "task_id": "",
+            "model_name": "qwen3.8-27b-noreason",
+            "total_latency": 0.0,
+            "first_token_time": "",
+            "request_start_time": "",
+            "input_tokens": 928,
+            "output_tokens": 27,
+            "total_tokens": 955,
+            "cache_tokens": 0,
+            "cache_read_tokens": 0,
+            "cache_miss_tokens": null,
+            "cache_write_tokens": null,
+            "cache_status": "observed",
+            "cache_source": "provider_usage",
+            "cache_authoritative": true,
+            "cache_creation_input_tokens": null,
+            "reasoning_tokens": 0,
+            "input_cost": 0.0,
+            "output_cost": 0.0,
+            "total_cost": 0.0
+          },
+          "tool_names": [
+            "read_file"
+          ]
+        },
+        {
+          "step": 4,
+          "usage": {
+            "code": 0,
+            "err_msg": "",
+            "prompt": "",
+            "task_id": "",
+            "model_name": "qwen3.8-27b-noreason",
+            "total_latency": 0.0,
+            "first_token_time": "",
+            "request_start_time": "",
+            "input_tokens": 982,
+            "output_tokens": 28,
+            "total_tokens": 1010,
+            "cache_tokens": 0,
+            "cache_read_tokens": 0,
+            "cache_miss_tokens": null,
+            "cache_write_tokens": null,
+            "cache_status": "observed",
+            "cache_source": "provider_usage",
+            "cache_authoritative": true,
+            "cache_creation_input_tokens": null,
+            "reasoning_tokens": 0,
+            "input_cost": 0.0,
+            "output_cost": 0.0,
+            "total_cost": 0.0
+          },
+          "tool_names": [
+            "submit_answer"
+          ]
+        }
+      ]
+    },
+    {
+      "task_id": "item_6af1c8547dccc01e",
+      "status": "submitted",
+      "answer": "705",
+      "skip_reason": null,
+      "spent": 314.19999999999993,
+      "trajectory": [
+        {
+          "phase": "feasibility_review",
+          "usage": {
+            "code": 0,
+            "err_msg": "",
+            "prompt": "",
+            "task_id": "",
+            "model_name": "qwen3.8-27b-noreason",
+            "total_latency": 0.0,
+            "first_token_time": "",
+            "request_start_time": "",
+            "input_tokens": 431,
+            "output_tokens": 42,
+            "total_tokens": 473,
+            "cache_tokens": 0,
+            "cache_read_tokens": 0,
+            "cache_miss_tokens": null,
+            "cache_write_tokens": null,
+            "cache_status": "observed",
+            "cache_source": "provider_usage",
+            "cache_authoritative": true,
+            "cache_creation_input_tokens": null,
+            "reasoning_tokens": 0,
+            "input_cost": 0.0,
+            "output_cost": 0.0,
+            "total_cost": 0.0
+          },
+          "review": {
+            "decision": "proceed",
+            "reason": "The task provides all necessary values (speeds and times) to calculate the exact total distance using arithmetic. No external resources or missing data are required."
+          },
+          "raw_review": "{\"reason\": \"The task provides all necessary values (speeds and times) to calculate the exact total distance using arithmetic. No external resources or missing data are required.\", \"decision\": \"proceed\"}",
+          "tool_names": []
+        },
+        {
+          "step": 1,
+          "usage": {
+            "code": 0,
+            "err_msg": "",
+            "prompt": "",
+            "task_id": "",
+            "model_name": "qwen3.8-27b-noreason",
+            "total_latency": 0.0,
+            "first_token_time": "",
+            "request_start_time": "",
+            "input_tokens": 767,
+            "output_tokens": 39,
+            "total_tokens": 806,
+            "cache_tokens": 0,
+            "cache_read_tokens": 0,
+            "cache_miss_tokens": null,
+            "cache_write_tokens": null,
+            "cache_status": "observed",
+            "cache_source": "provider_usage",
+            "cache_authoritative": true,
+            "cache_creation_input_tokens": null,
+            "reasoning_tokens": 0,
+            "input_cost": 0.0,
+            "output_cost": 0.0,
+            "total_cost": 0.0
+          },
+          "tool_names": [
+            "run_python"
+          ]
+        },
+        {
+          "step": 2,
+          "usage": {
+            "code": 0,
+            "err_msg": "",
+            "prompt": "",
+            "task_id": "",
+            "model_name": "qwen3.8-27b-noreason",
+            "total_latency": 0.0,
+            "first_token_time": "",
+            "request_start_time": "",
+            "input_tokens": 844,
+            "output_tokens": 29,
+            "total_tokens": 873,
+            "cache_tokens": 0,
+            "cache_read_tokens": 0,
+            "cache_miss_tokens": null,
+            "cache_write_tokens": null,
+            "cache_status": "observed",
+            "cache_source": "provider_usage",
+            "cache_authoritative": true,
+            "cache_creation_input_tokens": null,
+            "reasoning_tokens": 0,
+            "input_cost": 0.0,
+            "output_cost": 0.0,
+            "total_cost": 0.0
+          },
+          "tool_names": [
+            "submit_answer"
+          ]
+        }
+      ]
+    },
+    {
+      "task_id": "item_ddcbd82c1fab1d02",
+      "status": "submitted",
+      "answer": "859",
+      "skip_reason": null,
+      "spent": 301.4000000000001,
+      "trajectory": [
+        {
+          "phase": "feasibility_review",
+          "usage": {
+            "code": 0,
+            "err_msg": "",
+            "prompt": "",
+            "task_id": "",
+            "model_name": "qwen3.8-27b-noreason",
+            "total_latency": 0.0,
+            "first_token_time": "",
+            "request_start_time": "",
+            "input_tokens": 431,
+            "output_tokens": 31,
+            "total_tokens": 462,
+            "cache_tokens": 0,
+            "cache_read_tokens": 0,
+            "cache_miss_tokens": null,
+            "cache_write_tokens": null,
+            "cache_status": "observed",
+            "cache_source": "provider_usage",
+            "cache_authoritative": true,
+            "cache_creation_input_tokens": null,
+            "reasoning_tokens": 0,
+            "input_cost": 0.0,
+            "output_cost": 0.0,
+            "total_cost": 0.0
+          },
+          "review": {
+            "decision": "proceed",
+            "reason": "The task provides all necessary values (speeds and times) to calculate the exact total distance using arithmetic."
+          },
+          "raw_review": "{\"reason\":\"The task provides all necessary values (speeds and times) to calculate the exact total distance using arithmetic.\", \"decision\":\"proceed\"}",
+          "tool_names": []
+        },
+        {
+          "step": 1,
+          "usage": {
+            "code": 0,
+            "err_msg": "",
+            "prompt": "",
+            "task_id": "",
+            "model_name": "qwen3.8-27b-noreason",
+            "total_latency": 0.0,
+            "first_token_time": "",
+            "request_start_time": "",
+            "input_tokens": 758,
+            "output_tokens": 39,
+            "total_tokens": 797,
+            "cache_tokens": 0,
+            "cache_read_tokens": 0,
+            "cache_miss_tokens": null,
+            "cache_write_tokens": null,
+            "cache_status": "observed",
+            "cache_source": "provider_usage",
+            "cache_authoritative": true,
+            "cache_creation_input_tokens": null,
+            "reasoning_tokens": 0,
+            "input_cost": 0.0,
+            "output_cost": 0.0,
+            "total_cost": 0.0
+          },
+          "tool_names": [
+            "run_python"
+          ]
+        },
+        {
+          "step": 2,
+          "usage": {
+            "code": 0,
+            "err_msg": "",
+            "prompt": "",
+            "task_id": "",
+            "model_name": "qwen3.8-27b-noreason",
+            "total_latency": 0.0,
+            "first_token_time": "",
+            "request_start_time": "",
+            "input_tokens": 835,
+            "output_tokens": 29,
+            "total_tokens": 864,
+            "cache_tokens": 0,
+            "cache_read_tokens": 0,
+            "cache_miss_tokens": null,
+            "cache_write_tokens": null,
+            "cache_status": "observed",
+            "cache_source": "provider_usage",
+            "cache_authoritative": true,
+            "cache_creation_input_tokens": null,
+            "reasoning_tokens": 0,
+            "input_cost": 0.0,
+            "output_cost": 0.0,
+            "total_cost": 0.0
+          },
+          "tool_names": [
+            "submit_answer"
+          ]
+        }
+      ]
+    },
+    {
+      "task_id": "item_e6ea0bba10aa3f42",
+      "status": "submitted",
+      "answer": "934",
+      "skip_reason": null,
+      "spent": 314.20000000000005,
+      "trajectory": [
+        {
+          "phase": "feasibility_review",
+          "usage": {
+            "code": 0,
+            "err_msg": "",
+            "prompt": "",
+            "task_id": "",
+            "model_name": "qwen3.8-27b-noreason",
+            "total_latency": 0.0,
+            "first_token_time": "",
+            "request_start_time": "",
+            "input_tokens": 431,
+            "output_tokens": 42,
+            "total_tokens": 473,
+            "cache_tokens": 0,
+            "cache_read_tokens": 0,
+            "cache_miss_tokens": null,
+            "cache_write_tokens": null,
+            "cache_status": "observed",
+            "cache_source": "provider_usage",
+            "cache_authoritative": true,
+            "cache_creation_input_tokens": null,
+            "reasoning_tokens": 0,
+            "input_cost": 0.0,
+            "output_cost": 0.0,
+            "total_cost": 0.0
+          },
+          "review": {
+            "decision": "proceed",
+            "reason": "The task provides all necessary values (speeds and times) to calculate the exact total distance using arithmetic. No external resources or missing data are required."
+          },
+          "raw_review": "{\"reason\": \"The task provides all necessary values (speeds and times) to calculate the exact total distance using arithmetic. No external resources or missing data are required.\", \"decision\": \"proceed\"}",
+          "tool_names": []
+        },
+        {
+          "step": 1,
+          "usage": {
+            "code": 0,
+            "err_msg": "",
+            "prompt": "",
+            "task_id": "",
+            "model_name": "qwen3.8-27b-noreason",
+            "total_latency": 0.0,
+            "first_token_time": "",
+            "request_start_time": "",
+            "input_tokens": 767,
+            "output_tokens": 39,
+            "total_tokens": 806,
+            "cache_tokens": 0,
+            "cache_read_tokens": 0,
+            "cache_miss_tokens": null,
+            "cache_write_tokens": null,
+            "cache_status": "observed",
+            "cache_source": "provider_usage",
+            "cache_authoritative": true,
+            "cache_creation_input_tokens": null,
+            "reasoning_tokens": 0,
+            "input_cost": 0.0,
+            "output_cost": 0.0,
+            "total_cost": 0.0
+          },
+          "tool_names": [
+            "run_python"
+          ]
+        },
+        {
+          "step": 2,
+          "usage": {
+            "code": 0,
+            "err_msg": "",
+            "prompt": "",
+            "task_id": "",
+            "model_name": "qwen3.8-27b-noreason",
+            "total_latency": 0.0,
+            "first_token_time": "",
+            "request_start_time": "",
+            "input_tokens": 844,
+            "output_tokens": 29,
+            "total_tokens": 873,
+            "cache_tokens": 0,
+            "cache_read_tokens": 0,
+            "cache_miss_tokens": null,
+            "cache_write_tokens": null,
+            "cache_status": "observed",
+            "cache_source": "provider_usage",
+            "cache_authoritative": true,
+            "cache_creation_input_tokens": null,
+            "reasoning_tokens": 0,
+            "input_cost": 0.0,
+            "output_cost": 0.0,
+            "total_cost": 0.0
+          },
+          "tool_names": [
+            "submit_answer"
+          ]
+        }
+      ]
+    },
+    {
+      "task_id": "item_f5ff12a5a31381c5",
+      "status": "submitted",
+      "answer": "Kyoto",
+      "skip_reason": null,
+      "spent": 597.5,
+      "trajectory": [
+        {
+          "phase": "feasibility_review",
+          "usage": {
+            "code": 0,
+            "err_msg": "",
+            "prompt": "",
+            "task_id": "",
+            "model_name": "qwen3.8-27b-noreason",
+            "total_latency": 0.0,
+            "first_token_time": "",
+            "request_start_time": "",
+            "input_tokens": 510,
+            "output_tokens": 58,
+            "total_tokens": 568,
+            "cache_tokens": 0,
+            "cache_read_tokens": 0,
+            "cache_miss_tokens": null,
+            "cache_write_tokens": null,
+            "cache_status": "observed",
+            "cache_source": "provider_usage",
+            "cache_authoritative": true,
+            "cache_creation_input_tokens": null,
+            "reasoning_tokens": 0,
+            "input_cost": 0.0,
+            "output_cost": 0.0,
+            "total_cost": 0.0
+          },
+          "review": {
+            "decision": "proceed",
+            "reason": "The provided files contain all necessary links: Person-145 works at Lab-145, Lab-145 is owned by Firm-145, and Firm-145 is located in Kyoto."
+          },
+          "raw_review": "{\"reason\": \"The provided files contain all necessary links: Person-145 works at Lab-145, Lab-145 is owned by Firm-145, and Firm-145 is located in Kyoto.\", \"decision\": \"proceed\"}",
+          "tool_names": []
+        },
+        {
+          "step": 1,
+          "usage": {
+            "code": 0,
+            "err_msg": "",
+            "prompt": "",
+            "task_id": "",
+            "model_name": "qwen3.8-27b-noreason",
+            "total_latency": 0.0,
+            "first_token_time": "",
+            "request_start_time": "",
+            "input_tokens": 772,
+            "output_tokens": 26,
+            "total_tokens": 798,
+            "cache_tokens": 0,
+            "cache_read_tokens": 0,
+            "cache_miss_tokens": null,
+            "cache_write_tokens": null,
+            "cache_status": "observed",
+            "cache_source": "provider_usage",
+            "cache_authoritative": true,
+            "cache_creation_input_tokens": null,
+            "reasoning_tokens": 0,
+            "input_cost": 0.0,
+            "output_cost": 0.0,
+            "total_cost": 0.0
+          },
+          "tool_names": [
+            "list_files"
+          ]
+        },
+        {
+          "step": 2,
+          "usage": {
+            "code": 0,
+            "err_msg": "",
+            "prompt": "",
+            "task_id": "",
+            "model_name": "qwen3.8-27b-noreason",
+            "total_latency": 0.0,
+            "first_token_time": "",
+            "request_start_time": "",
+            "input_tokens": 832,
+            "output_tokens": 54,
+            "total_tokens": 886,
+            "cache_tokens": 0,
+            "cache_read_tokens": 0,
+            "cache_miss_tokens": null,
+            "cache_write_tokens": null,
+            "cache_status": "observed",
+            "cache_source": "provider_usage",
+            "cache_authoritative": true,
+            "cache_creation_input_tokens": null,
+            "reasoning_tokens": 0,
+            "input_cost": 0.0,
+            "output_cost": 0.0,
+            "total_cost": 0.0
+          },
+          "tool_names": [
+            "read_file",
+            "read_file"
+          ]
+        },
+        {
+          "step": 3,
+          "usage": {
+            "code": 0,
+            "err_msg": "",
+            "prompt": "",
+            "task_id": "",
+            "model_name": "qwen3.8-27b-noreason",
+            "total_latency": 0.0,
+            "first_token_time": "",
+            "request_start_time": "",
+            "input_tokens": 938,
+            "output_tokens": 27,
+            "total_tokens": 965,
+            "cache_tokens": 0,
+            "cache_read_tokens": 0,
+            "cache_miss_tokens": null,
+            "cache_write_tokens": null,
+            "cache_status": "observed",
+            "cache_source": "provider_usage",
+            "cache_authoritative": true,
+            "cache_creation_input_tokens": null,
+            "reasoning_tokens": 0,
+            "input_cost": 0.0,
+            "output_cost": 0.0,
+            "total_cost": 0.0
+          },
+          "tool_names": [
+            "read_file"
+          ]
+        },
+        {
+          "step": 4,
+          "usage": {
+            "code": 0,
+            "err_msg": "",
+            "prompt": "",
+            "task_id": "",
+            "model_name": "qwen3.8-27b-noreason",
+            "total_latency": 0.0,
+            "first_token_time": "",
+            "request_start_time": "",
+            "input_tokens": 993,
+            "output_tokens": 28,
+            "total_tokens": 1021,
+            "cache_tokens": 0,
+            "cache_read_tokens": 0,
+            "cache_miss_tokens": null,
+            "cache_write_tokens": null,
+            "cache_status": "observed",
+            "cache_source": "provider_usage",
+            "cache_authoritative": true,
+            "cache_creation_input_tokens": null,
+            "reasoning_tokens": 0,
+            "input_cost": 0.0,
+            "output_cost": 0.0,
+            "total_cost": 0.0
+          },
+          "tool_names": [
+            "submit_answer"
+          ]
+        }
+      ]
+    },
+    {
+      "task_id": "item_573d06db68b1d92f",
+      "status": "submitted",
+      "answer": "743",
+      "skip_reason": null,
+      "spent": 314.1999999999998,
+      "trajectory": [
+        {
+          "phase": "feasibility_review",
+          "usage": {
+            "code": 0,
+            "err_msg": "",
+            "prompt": "",
+            "task_id": "",
+            "model_name": "qwen3.8-27b-noreason",
+            "total_latency": 0.0,
+            "first_token_time": "",
+            "request_start_time": "",
+            "input_tokens": 431,
+            "output_tokens": 42,
+            "total_tokens": 473,
+            "cache_tokens": 0,
+            "cache_read_tokens": 0,
+            "cache_miss_tokens": null,
+            "cache_write_tokens": null,
+            "cache_status": "observed",
+            "cache_source": "provider_usage",
+            "cache_authoritative": true,
+            "cache_creation_input_tokens": null,
+            "reasoning_tokens": 0,
+            "input_cost": 0.0,
+            "output_cost": 0.0,
+            "total_cost": 0.0
+          },
+          "review": {
+            "decision": "proceed",
+            "reason": "The task provides all necessary values (speeds and times) to calculate the exact total distance using arithmetic. No external resources or missing data are required."
+          },
+          "raw_review": "{\"reason\": \"The task provides all necessary values (speeds and times) to calculate the exact total distance using arithmetic. No external resources or missing data are required.\", \"decision\": \"proceed\"}",
+          "tool_names": []
+        },
+        {
+          "step": 1,
+          "usage": {
+            "code": 0,
+            "err_msg": "",
+            "prompt": "",
+            "task_id": "",
+            "model_name": "qwen3.8-27b-noreason",
+            "total_latency": 0.0,
+            "first_token_time": "",
+            "request_start_time": "",
+            "input_tokens": 767,
+            "output_tokens": 39,
+            "total_tokens": 806,
+            "cache_tokens": 0,
+            "cache_read_tokens": 0,
+            "cache_miss_tokens": null,
+            "cache_write_tokens": null,
+            "cache_status": "observed",
+            "cache_source": "provider_usage",
+            "cache_authoritative": true,
+            "cache_creation_input_tokens": null,
+            "reasoning_tokens": 0,
+            "input_cost": 0.0,
+            "output_cost": 0.0,
+            "total_cost": 0.0
+          },
+          "tool_names": [
+            "run_python"
+          ]
+        },
+        {
+          "step": 2,
+          "usage": {
+            "code": 0,
+            "err_msg": "",
+            "prompt": "",
+            "task_id": "",
+            "model_name": "qwen3.8-27b-noreason",
+            "total_latency": 0.0,
+            "first_token_time": "",
+            "request_start_time": "",
+            "input_tokens": 844,
+            "output_tokens": 29,
+            "total_tokens": 873,
+            "cache_tokens": 0,
+            "cache_read_tokens": 0,
+            "cache_miss_tokens": null,
+            "cache_write_tokens": null,
+            "cache_status": "observed",
+            "cache_source": "provider_usage",
+            "cache_authoritative": true,
+            "cache_creation_input_tokens": null,
+            "reasoning_tokens": 0,
+            "input_cost": 0.0,
+            "output_cost": 0.0,
+            "total_cost": 0.0
+          },
+          "tool_names": [
+            "submit_answer"
+          ]
+        }
+      ]
+    },
+    {
+      "task_id": "item_94d01f7a212c387c",
+      "status": "skipped",
+      "answer": null,
+      "skip_reason": "The instruction explicitly states the second duration is 'unknown' and provides no value for it in the resources. Without this specific value, the exact total distance cannot be calculated.",
+      "spent": 196.30000000000018,
+      "trajectory": [
+        {
+          "phase": "feasibility_review",
+          "usage": {
+            "code": 0,
+            "err_msg": "",
+            "prompt": "",
+            "task_id": "",
+            "model_name": "qwen3.8-27b-noreason",
+            "total_latency": 0.0,
+            "first_token_time": "",
+            "request_start_time": "",
+            "input_tokens": 433,
+            "output_tokens": 54,
+            "total_tokens": 487,
+            "cache_tokens": 0,
+            "cache_read_tokens": 0,
+            "cache_miss_tokens": null,
+            "cache_write_tokens": null,
+            "cache_status": "observed",
+            "cache_source": "provider_usage",
+            "cache_authoritative": true,
+            "cache_creation_input_tokens": null,
+            "reasoning_tokens": 0,
+            "input_cost": 0.0,
+            "output_cost": 0.0,
+            "total_cost": 0.0
+          },
+          "review": {
+            "decision": "skip",
+            "reason": "The task requires calculating the total distance, which depends on the unknown number of hours traveled at 53 km/h. Since this value is not provided in the resources or instruction, the exact total cannot be determined."
+          },
+          "raw_review": "{\"reason\": \"The task requires calculating the total distance, which depends on the unknown number of hours traveled at 53 km/h. Since this value is not provided in the resources or instruction, the exact total cannot be determined.\", \"decision\": \"skip\"}",
+          "tool_names": []
+        },
+        {
+          "phase": "skip_audit",
+          "usage": {
+            "code": 0,
+            "err_msg": "",
+            "prompt": "",
+            "task_id": "",
+            "model_name": "qwen3.8-27b-noreason",
+            "total_latency": 0.0,
+            "first_token_time": "",
+            "request_start_time": "",
+            "input_tokens": 540,
+            "output_tokens": 45,
+            "total_tokens": 585,
+            "cache_tokens": 0,
+            "cache_read_tokens": 0,
+            "cache_miss_tokens": null,
+            "cache_write_tokens": null,
+            "cache_status": "observed",
+            "cache_source": "provider_usage",
+            "cache_authoritative": true,
+            "cache_creation_input_tokens": null,
+            "reasoning_tokens": 0,
+            "input_cost": 0.0,
+            "output_cost": 0.0,
+            "total_cost": 0.0
+          },
+          "review": {
+            "decision": "skip",
+            "reason": "The instruction explicitly states the second duration is 'unknown' and provides no value for it in the resources. Without this specific value, the exact total distance cannot be calculated."
+          },
+          "raw_review": "{\"reason\": \"The instruction explicitly states the second duration is 'unknown' and provides no value for it in the resources. Without this specific value, the exact total distance cannot be calculated.\", \"decision\": \"skip\"}",
+          "tool_names": []
+        }
+      ]
+    },
+    {
+      "task_id": "item_2cf251a50893b500",
+      "status": "submitted",
+      "answer": "212",
+      "skip_reason": null,
+      "spent": 420.2999999999997,
+      "trajectory": [
+        {
+          "phase": "feasibility_review",
+          "usage": {
+            "code": 0,
+            "err_msg": "",
+            "prompt": "",
+            "task_id": "",
+            "model_name": "qwen3.8-27b-noreason",
+            "total_latency": 0.0,
+            "first_token_time": "",
+            "request_start_time": "",
+            "input_tokens": 451,
+            "output_tokens": 59,
+            "total_tokens": 510,
+            "cache_tokens": 0,
+            "cache_read_tokens": 0,
+            "cache_miss_tokens": null,
+            "cache_write_tokens": null,
+            "cache_status": "observed",
+            "cache_source": "provider_usage",
+            "cache_authoritative": true,
+            "cache_creation_input_tokens": null,
+            "reasoning_tokens": 0,
+            "input_cost": 0.0,
+            "output_cost": 0.0,
+            "total_cost": 0.0
+          },
+          "review": {
+            "decision": "proceed",
+            "reason": "The first row has units=4 and price=53, contributing 212. The second row has units=0, which contributes 0 regardless of the unknown price. The exact sum is determined by the available data."
+          },
+          "raw_review": "{\"reason\": \"The first row has units=4 and price=53, contributing 212. The second row has units=0, which contributes 0 regardless of the unknown price. The exact sum is determined by the available data.\", \"decision\": \"proceed\"}",
+          "tool_names": []
+        },
+        {
+          "step": 1,
+          "usage": {
+            "code": 0,
+            "err_msg": "",
+            "prompt": "",
+            "task_id": "",
+            "model_name": "qwen3.8-27b-noreason",
+            "total_latency": 0.0,
+            "first_token_time": "",
+            "request_start_time": "",
+            "input_tokens": 784,
+            "output_tokens": 14,
+            "total_tokens": 798,
+            "cache_tokens": 0,
+            "cache_read_tokens": 0,
+            "cache_miss_tokens": null,
+            "cache_write_tokens": null,
+            "cache_status": "observed",
+            "cache_source": "provider_usage",
+            "cache_authoritative": true,
+            "cache_creation_input_tokens": null,
+            "reasoning_tokens": 0,
+            "input_cost": 0.0,
+            "output_cost": 0.0,
+            "total_cost": 0.0
+          },
+          "tool_names": [
+            "list_files"
+          ]
+        },
+        {
+          "step": 2,
+          "usage": {
+            "code": 0,
+            "err_msg": "",
+            "prompt": "",
+            "task_id": "",
+            "model_name": "qwen3.8-27b-noreason",
+            "total_latency": 0.0,
+            "first_token_time": "",
+            "request_start_time": "",
+            "input_tokens": 817,
+            "output_tokens": 26,
+            "total_tokens": 843,
+            "cache_tokens": 0,
+            "cache_read_tokens": 0,
+            "cache_miss_tokens": null,
+            "cache_write_tokens": null,
+            "cache_status": "observed",
+            "cache_source": "provider_usage",
+            "cache_authoritative": true,
+            "cache_creation_input_tokens": null,
+            "reasoning_tokens": 0,
+            "input_cost": 0.0,
+            "output_cost": 0.0,
+            "total_cost": 0.0
+          },
+          "tool_names": [
+            "read_file"
+          ]
+        },
+        {
+          "step": 3,
+          "usage": {
+            "code": 0,
+            "err_msg": "",
+            "prompt": "",
+            "task_id": "",
+            "model_name": "qwen3.8-27b-noreason",
+            "total_latency": 0.0,
+            "first_token_time": "",
+            "request_start_time": "",
+            "input_tokens": 871,
+            "output_tokens": 29,
+            "total_tokens": 900,
+            "cache_tokens": 0,
+            "cache_read_tokens": 0,
+            "cache_miss_tokens": null,
+            "cache_write_tokens": null,
+            "cache_status": "observed",
+            "cache_source": "provider_usage",
+            "cache_authoritative": true,
+            "cache_creation_input_tokens": null,
+            "reasoning_tokens": 0,
+            "input_cost": 0.0,
+            "output_cost": 0.0,
+            "total_cost": 0.0
+          },
+          "tool_names": [
+            "submit_answer"
+          ]
+        }
+      ]
+    },
+    {
+      "task_id": "item_3e21420c911f8d3e",
+      "status": "submitted",
+      "answer": "684",
+      "skip_reason": null,
+      "spent": 420.3000000000002,
+      "trajectory": [
+        {
+          "phase": "feasibility_review",
+          "usage": {
+            "code": 0,
+            "err_msg": "",
+            "prompt": "",
+            "task_id": "",
+            "model_name": "qwen3.8-27b-noreason",
+            "total_latency": 0.0,
+            "first_token_time": "",
+            "request_start_time": "",
+            "input_tokens": 451,
+            "output_tokens": 59,
+            "total_tokens": 510,
+            "cache_tokens": 0,
+            "cache_read_tokens": 0,
+            "cache_miss_tokens": null,
+            "cache_write_tokens": null,
+            "cache_status": "observed",
+            "cache_source": "provider_usage",
+            "cache_authoritative": true,
+            "cache_creation_input_tokens": null,
+            "reasoning_tokens": 0,
+            "input_cost": 0.0,
+            "output_cost": 0.0,
+            "total_cost": 0.0
+          },
+          "review": {
+            "decision": "proceed",
+            "reason": "The first row has known units and price (9*76=684). The second row has 0 units, so it contributes 0 regardless of the unknown price. The total sum is exactly 684."
+          },
+          "raw_review": "{\"reason\": \"The first row has known units and price (9*76=684). The second row has 0 units, so it contributes 0 regardless of the unknown price. The total sum is exactly 684.\", \"decision\": \"proceed\"}",
+          "tool_names": []
+        },
+        {
+          "step": 1,
+          "usage": {
+            "code": 0,
+            "err_msg": "",
+            "prompt": "",
+            "task_id": "",
+            "model_name": "qwen3.8-27b-noreason",
+            "total_latency": 0.0,
+            "first_token_time": "",
+            "request_start_time": "",
+            "input_tokens": 784,
+            "output_tokens": 14,
+            "total_tokens": 798,
+            "cache_tokens": 0,
+            "cache_read_tokens": 0,
+            "cache_miss_tokens": null,
+            "cache_write_tokens": null,
+            "cache_status": "observed",
+            "cache_source": "provider_usage",
+            "cache_authoritative": true,
+            "cache_creation_input_tokens": null,
+            "reasoning_tokens": 0,
+            "input_cost": 0.0,
+            "output_cost": 0.0,
+            "total_cost": 0.0
+          },
+          "tool_names": [
+            "list_files"
+          ]
+        },
+        {
+          "step": 2,
+          "usage": {
+            "code": 0,
+            "err_msg": "",
+            "prompt": "",
+            "task_id": "",
+            "model_name": "qwen3.8-27b-noreason",
+            "total_latency": 0.0,
+            "first_token_time": "",
+            "request_start_time": "",
+            "input_tokens": 817,
+            "output_tokens": 26,
+            "total_tokens": 843,
+            "cache_tokens": 0,
+            "cache_read_tokens": 0,
+            "cache_miss_tokens": null,
+            "cache_write_tokens": null,
+            "cache_status": "observed",
+            "cache_source": "provider_usage",
+            "cache_authoritative": true,
+            "cache_creation_input_tokens": null,
+            "reasoning_tokens": 0,
+            "input_cost": 0.0,
+            "output_cost": 0.0,
+            "total_cost": 0.0
+          },
+          "tool_names": [
+            "read_file"
+          ]
+        },
+        {
+          "step": 3,
+          "usage": {
+            "code": 0,
+            "err_msg": "",
+            "prompt": "",
+            "task_id": "",
+            "model_name": "qwen3.8-27b-noreason",
+            "total_latency": 0.0,
+            "first_token_time": "",
+            "request_start_time": "",
+            "input_tokens": 871,
+            "output_tokens": 29,
+            "total_tokens": 900,
+            "cache_tokens": 0,
+            "cache_read_tokens": 0,
+            "cache_miss_tokens": null,
+            "cache_write_tokens": null,
+            "cache_status": "observed",
+            "cache_source": "provider_usage",
+            "cache_authoritative": true,
+            "cache_creation_input_tokens": null,
+            "reasoning_tokens": 0,
+            "input_cost": 0.0,
+            "output_cost": 0.0,
+            "total_cost": 0.0
+          },
+          "tool_names": [
+            "submit_answer"
+          ]
+        }
+      ]
+    },
+    {
+      "task_id": "item_988b7fcc67dc800b",
+      "status": "skipped",
+      "answer": null,
+      "skip_reason": "The price for the second row is explicitly defined as an unknown value in the instructions, and no other data in the provided files allows for its derivation. Therefore, the exact sum cannot be determined.",
+      "spent": 209.30000000000018,
+      "trajectory": [
+        {
+          "phase": "feasibility_review",
+          "usage": {
+            "code": 0,
+            "err_msg": "",
+            "prompt": "",
+            "task_id": "",
+            "model_name": "qwen3.8-27b-noreason",
+            "total_latency": 0.0,
+            "first_token_time": "",
+            "request_start_time": "",
+            "input_tokens": 451,
+            "output_tokens": 58,
+            "total_tokens": 509,
+            "cache_tokens": 0,
+            "cache_read_tokens": 0,
+            "cache_miss_tokens": null,
+            "cache_write_tokens": null,
+            "cache_status": "observed",
+            "cache_source": "provider_usage",
+            "cache_authoritative": true,
+            "cache_creation_input_tokens": null,
+            "reasoning_tokens": 0,
+            "input_cost": 0.0,
+            "output_cost": 0.0,
+            "total_cost": 0.0
+          },
+          "review": {
+            "decision": "skip",
+            "reason": "The price for the second row (8 units) is blank, which the instructions define as an unknown finite nonnegative integer. Since this value is not provided and cannot be derived from the available data, the exact sum cannot be calculated."
+          },
+          "raw_review": "{\"reason\": \"The price for the second row (8 units) is blank, which the instructions define as an unknown finite nonnegative integer. Since this value is not provided and cannot be derived from the available data, the exact sum cannot be calculated.\", \"decision\": \"skip\"}",
+          "tool_names": []
+        },
+        {
+          "phase": "skip_audit",
+          "usage": {
+            "code": 0,
+            "err_msg": "",
+            "prompt": "",
+            "task_id": "",
+            "model_name": "qwen3.8-27b-noreason",
+            "total_latency": 0.0,
+            "first_token_time": "",
+            "request_start_time": "",
+            "input_tokens": 562,
+            "output_tokens": 50,
+            "total_tokens": 612,
+            "cache_tokens": 0,
+            "cache_read_tokens": 0,
+            "cache_miss_tokens": null,
+            "cache_write_tokens": null,
+            "cache_status": "observed",
+            "cache_source": "provider_usage",
+            "cache_authoritative": true,
+            "cache_creation_input_tokens": null,
+            "reasoning_tokens": 0,
+            "input_cost": 0.0,
+            "output_cost": 0.0,
+            "total_cost": 0.0
+          },
+          "review": {
+            "decision": "skip",
+            "reason": "The price for the second row is explicitly defined as an unknown value in the instructions, and no other data in the provided files allows for its derivation. Therefore, the exact sum cannot be determined."
+          },
+          "raw_review": "{\"reason\": \"The price for the second row is explicitly defined as an unknown value in the instructions, and no other data in the provided files allows for its derivation. Therefore, the exact sum cannot be determined.\", \"decision\": \"skip\"}",
+          "tool_names": []
+        }
+      ]
+    },
+    {
+      "task_id": "item_86db3bcee8c3243d",
+      "status": "submitted",
+      "answer": "670",
+      "skip_reason": null,
+      "spent": 314.1999999999998,
+      "trajectory": [
+        {
+          "phase": "feasibility_review",
+          "usage": {
+            "code": 0,
+            "err_msg": "",
+            "prompt": "",
+            "task_id": "",
+            "model_name": "qwen3.8-27b-noreason",
+            "total_latency": 0.0,
+            "first_token_time": "",
+            "request_start_time": "",
+            "input_tokens": 431,
+            "output_tokens": 42,
+            "total_tokens": 473,
+            "cache_tokens": 0,
+            "cache_read_tokens": 0,
+            "cache_miss_tokens": null,
+            "cache_write_tokens": null,
+            "cache_status": "observed",
+            "cache_source": "provider_usage",
+            "cache_authoritative": true,
+            "cache_creation_input_tokens": null,
+            "reasoning_tokens": 0,
+            "input_cost": 0.0,
+            "output_cost": 0.0,
+            "total_cost": 0.0
+          },
+          "review": {
+            "decision": "proceed",
+            "reason": "The task provides all necessary values (speeds and times) to calculate the exact total distance using arithmetic. No external resources or missing data are required."
+          },
+          "raw_review": "{\"reason\": \"The task provides all necessary values (speeds and times) to calculate the exact total distance using arithmetic. No external resources or missing data are required.\", \"decision\": \"proceed\"}",
+          "tool_names": []
+        },
+        {
+          "step": 1,
+          "usage": {
+            "code": 0,
+            "err_msg": "",
+            "prompt": "",
+            "task_id": "",
+            "model_name": "qwen3.8-27b-noreason",
+            "total_latency": 0.0,
+            "first_token_time": "",
+            "request_start_time": "",
+            "input_tokens": 767,
+            "output_tokens": 39,
+            "total_tokens": 806,
+            "cache_tokens": 0,
+            "cache_read_tokens": 0,
+            "cache_miss_tokens": null,
+            "cache_write_tokens": null,
+            "cache_status": "observed",
+            "cache_source": "provider_usage",
+            "cache_authoritative": true,
+            "cache_creation_input_tokens": null,
+            "reasoning_tokens": 0,
+            "input_cost": 0.0,
+            "output_cost": 0.0,
+            "total_cost": 0.0
+          },
+          "tool_names": [
+            "run_python"
+          ]
+        },
+        {
+          "step": 2,
+          "usage": {
+            "code": 0,
+            "err_msg": "",
+            "prompt": "",
+            "task_id": "",
+            "model_name": "qwen3.8-27b-noreason",
+            "total_latency": 0.0,
+            "first_token_time": "",
+            "request_start_time": "",
+            "input_tokens": 844,
+            "output_tokens": 29,
+            "total_tokens": 873,
+            "cache_tokens": 0,
+            "cache_read_tokens": 0,
+            "cache_miss_tokens": null,
+            "cache_write_tokens": null,
+            "cache_status": "observed",
+            "cache_source": "provider_usage",
+            "cache_authoritative": true,
+            "cache_creation_input_tokens": null,
+            "reasoning_tokens": 0,
+            "input_cost": 0.0,
+            "output_cost": 0.0,
+            "total_cost": 0.0
+          },
+          "tool_names": [
+            "submit_answer"
+          ]
+        }
+      ]
+    },
+    {
+      "task_id": "item_7bf64888802e871c",
+      "status": "skipped",
+      "answer": null,
+      "skip_reason": "The second row has 8 units and a blank price, which is defined as an unknown finite nonnegative integer. Since the price is not zero (unless specified, but 'unknown' implies it could be any value), the sum depends on this unknown variable and cannot be determined exactly.",
+      "spent": 204.19999999999982,
+      "trajectory": [
+        {
+          "phase": "feasibility_review",
+          "usage": {
+            "code": 0,
+            "err_msg": "",
+            "prompt": "",
+            "task_id": "",
+            "model_name": "qwen3.8-27b-noreason",
+            "total_latency": 0.0,
+            "first_token_time": "",
+            "request_start_time": "",
+            "input_tokens": 451,
+            "output_tokens": 37,
+            "total_tokens": 488,
+            "cache_tokens": 0,
+            "cache_read_tokens": 0,
+            "cache_miss_tokens": null,
+            "cache_write_tokens": null,
+            "cache_status": "observed",
+            "cache_source": "provider_usage",
+            "cache_authoritative": true,
+            "cache_creation_input_tokens": null,
+            "reasoning_tokens": 0,
+            "input_cost": 0.0,
+            "output_cost": 0.0,
+            "total_cost": 0.0
+          },
+          "review": {
+            "decision": "skip",
+            "reason": "The price for the second row is blank and explicitly defined as an unknown finite nonnegative integer, making the total sum indeterminate."
+          },
+          "raw_review": "{\"reason\": \"The price for the second row is blank and explicitly defined as an unknown finite nonnegative integer, making the total sum indeterminate.\", \"decision\": \"skip\"}",
+          "tool_names": []
+        },
+        {
+          "phase": "skip_audit",
+          "usage": {
+            "code": 0,
+            "err_msg": "",
+            "prompt": "",
+            "task_id": "",
+            "model_name": "qwen3.8-27b-noreason",
+            "total_latency": 0.0,
+            "first_token_time": "",
+            "request_start_time": "",
+            "input_tokens": 541,
+            "output_tokens": 68,
+            "total_tokens": 609,
+            "cache_tokens": 0,
+            "cache_read_tokens": 0,
+            "cache_miss_tokens": null,
+            "cache_write_tokens": null,
+            "cache_status": "observed",
+            "cache_source": "provider_usage",
+            "cache_authoritative": true,
+            "cache_creation_input_tokens": null,
+            "reasoning_tokens": 0,
+            "input_cost": 0.0,
+            "output_cost": 0.0,
+            "total_cost": 0.0
+          },
+          "review": {
+            "decision": "skip",
+            "reason": "The second row has 8 units and a blank price, which is defined as an unknown finite nonnegative integer. Since the price is not zero (unless specified, but 'unknown' implies it could be any value), the sum depends on this unknown variable and cannot be determined exactly."
+          },
+          "raw_review": "{\"reason\": \"The second row has 8 units and a blank price, which is defined as an unknown finite nonnegative integer. Since the price is not zero (unless specified, but 'unknown' implies it could be any value), the sum depends on this unknown variable and cannot be determined exactly.\", \"decision\": \"skip\"}",
+          "tool_names": []
+        }
+      ]
+    },
+    {
+      "task_id": "item_34bdc7517d290d0f",
+      "status": "submitted",
+      "answer": "255",
+      "skip_reason": null,
+      "spent": 614.6000000000004,
+      "trajectory": [
+        {
+          "phase": "feasibility_review",
+          "usage": {
+            "code": 0,
+            "err_msg": "",
+            "prompt": "",
+            "task_id": "",
+            "model_name": "qwen3.8-27b-noreason",
+            "total_latency": 0.0,
+            "first_token_time": "",
+            "request_start_time": "",
+            "input_tokens": 451,
+            "output_tokens": 59,
+            "total_tokens": 510,
+            "cache_tokens": 0,
+            "cache_read_tokens": 0,
+            "cache_miss_tokens": null,
+            "cache_write_tokens": null,
+            "cache_status": "observed",
+            "cache_source": "provider_usage",
+            "cache_authoritative": true,
+            "cache_creation_input_tokens": null,
+            "reasoning_tokens": 0,
+            "input_cost": 0.0,
+            "output_cost": 0.0,
+            "total_cost": 0.0
+          },
+          "review": {
+            "decision": "proceed",
+            "reason": "The first row has units=5 and price=51, contributing 255. The second row has units=0, which contributes 0 regardless of the unknown price. The exact sum is determined by the available data."
+          },
+          "raw_review": "{\"reason\": \"The first row has units=5 and price=51, contributing 255. The second row has units=0, which contributes 0 regardless of the unknown price. The exact sum is determined by the available data.\", \"decision\": \"proceed\"}",
+          "tool_names": []
+        },
+        {
+          "step": 1,
+          "usage": {
+            "code": 0,
+            "err_msg": "",
+            "prompt": "",
+            "task_id": "",
+            "model_name": "qwen3.8-27b-noreason",
+            "total_latency": 0.0,
+            "first_token_time": "",
+            "request_start_time": "",
+            "input_tokens": 784,
+            "output_tokens": 14,
+            "total_tokens": 798,
+            "cache_tokens": 0,
+            "cache_read_tokens": 0,
+            "cache_miss_tokens": null,
+            "cache_write_tokens": null,
+            "cache_status": "observed",
+            "cache_source": "provider_usage",
+            "cache_authoritative": true,
+            "cache_creation_input_tokens": null,
+            "reasoning_tokens": 0,
+            "input_cost": 0.0,
+            "output_cost": 0.0,
+            "total_cost": 0.0
+          },
+          "tool_names": [
+            "list_files"
+          ]
+        },
+        {
+          "step": 2,
+          "usage": {
+            "code": 0,
+            "err_msg": "",
+            "prompt": "",
+            "task_id": "",
+            "model_name": "qwen3.8-27b-noreason",
+            "total_latency": 0.0,
+            "first_token_time": "",
+            "request_start_time": "",
+            "input_tokens": 817,
+            "output_tokens": 26,
+            "total_tokens": 843,
+            "cache_tokens": 0,
+            "cache_read_tokens": 0,
+            "cache_miss_tokens": null,
+            "cache_write_tokens": null,
+            "cache_status": "observed",
+            "cache_source": "provider_usage",
+            "cache_authoritative": true,
+            "cache_creation_input_tokens": null,
+            "reasoning_tokens": 0,
+            "input_cost": 0.0,
+            "output_cost": 0.0,
+            "total_cost": 0.0
+          },
+          "tool_names": [
+            "read_file"
+          ]
+        },
+        {
+          "step": 3,
+          "usage": {
+            "code": 0,
+            "err_msg": "",
+            "prompt": "",
+            "task_id": "",
+            "model_name": "qwen3.8-27b-noreason",
+            "total_latency": 0.0,
+            "first_token_time": "",
+            "request_start_time": "",
+            "input_tokens": 871,
+            "output_tokens": 94,
+            "total_tokens": 965,
+            "cache_tokens": 0,
+            "cache_read_tokens": 0,
+            "cache_miss_tokens": null,
+            "cache_write_tokens": null,
+            "cache_status": "observed",
+            "cache_source": "provider_usage",
+            "cache_authoritative": true,
+            "cache_creation_input_tokens": null,
+            "reasoning_tokens": 0,
+            "input_cost": 0.0,
+            "output_cost": 0.0,
+            "total_cost": 0.0
+          },
+          "tool_names": [
+            "run_python"
+          ]
+        },
+        {
+          "step": 4,
+          "usage": {
+            "code": 0,
+            "err_msg": "",
+            "prompt": "",
+            "task_id": "",
+            "model_name": "qwen3.8-27b-noreason",
+            "total_latency": 0.0,
+            "first_token_time": "",
+            "request_start_time": "",
+            "input_tokens": 1003,
+            "output_tokens": 29,
+            "total_tokens": 1032,
+            "cache_tokens": 0,
+            "cache_read_tokens": 0,
+            "cache_miss_tokens": null,
+            "cache_write_tokens": null,
+            "cache_status": "observed",
+            "cache_source": "provider_usage",
+            "cache_authoritative": true,
+            "cache_creation_input_tokens": null,
+            "reasoning_tokens": 0,
+            "input_cost": 0.0,
+            "output_cost": 0.0,
+            "total_cost": 0.0
+          },
+          "tool_names": [
+            "submit_answer"
+          ]
+        }
+      ]
+    },
+    {
+      "task_id": "item_b2c0abd09093ada6",
+      "status": "submitted",
+      "answer": "Oslo",
+      "skip_reason": null,
+      "spent": 587.3000000000002,
+      "trajectory": [
+        {
+          "phase": "feasibility_review",
+          "usage": {
+            "code": 0,
+            "err_msg": "",
+            "prompt": "",
+            "task_id": "",
+            "model_name": "qwen3.8-27b-noreason",
+            "total_latency": 0.0,
+            "first_token_time": "",
+            "request_start_time": "",
+            "input_tokens": 504,
+            "output_tokens": 53,
+            "total_tokens": 557,
+            "cache_tokens": 0,
+            "cache_read_tokens": 0,
+            "cache_miss_tokens": null,
+            "cache_write_tokens": null,
+            "cache_status": "observed",
+            "cache_source": "provider_usage",
+            "cache_authoritative": true,
+            "cache_creation_input_tokens": null,
+            "reasoning_tokens": 0,
+            "input_cost": 0.0,
+            "output_cost": 0.0,
+            "total_cost": 0.0
+          },
+          "review": {
+            "decision": "proceed",
+            "reason": "The chain of facts is fully present: Person-90 works at Lab-90, Lab-90 is owned by Firm-90, and Firm-90 is located in Oslo."
+          },
+          "raw_review": "{\"reason\": \"The chain of facts is fully present: Person-90 works at Lab-90, Lab-90 is owned by Firm-90, and Firm-90 is located in Oslo.\", \"decision\": \"proceed\"}",
+          "tool_names": []
+        },
+        {
+          "step": 1,
+          "usage": {
+            "code": 0,
+            "err_msg": "",
+            "prompt": "",
+            "task_id": "",
+            "model_name": "qwen3.8-27b-noreason",
+            "total_latency": 0.0,
+            "first_token_time": "",
+            "request_start_time": "",
+            "input_tokens": 766,
+            "output_tokens": 25,
+            "total_tokens": 791,
+            "cache_tokens": 0,
+            "cache_read_tokens": 0,
+            "cache_miss_tokens": null,
+            "cache_write_tokens": null,
+            "cache_status": "observed",
+            "cache_source": "provider_usage",
+            "cache_authoritative": true,
+            "cache_creation_input_tokens": null,
+            "reasoning_tokens": 0,
+            "input_cost": 0.0,
+            "output_cost": 0.0,
+            "total_cost": 0.0
+          },
+          "tool_names": [
+            "list_files"
+          ]
+        },
+        {
+          "step": 2,
+          "usage": {
+            "code": 0,
+            "err_msg": "",
+            "prompt": "",
+            "task_id": "",
+            "model_name": "qwen3.8-27b-noreason",
+            "total_latency": 0.0,
+            "first_token_time": "",
+            "request_start_time": "",
+            "input_tokens": 825,
+            "output_tokens": 54,
+            "total_tokens": 879,
+            "cache_tokens": 0,
+            "cache_read_tokens": 0,
+            "cache_miss_tokens": null,
+            "cache_write_tokens": null,
+            "cache_status": "observed",
+            "cache_source": "provider_usage",
+            "cache_authoritative": true,
+            "cache_creation_input_tokens": null,
+            "reasoning_tokens": 0,
+            "input_cost": 0.0,
+            "output_cost": 0.0,
+            "total_cost": 0.0
+          },
+          "tool_names": [
+            "read_file",
+            "read_file"
+          ]
+        },
+        {
+          "step": 3,
+          "usage": {
+            "code": 0,
+            "err_msg": "",
+            "prompt": "",
+            "task_id": "",
+            "model_name": "qwen3.8-27b-noreason",
+            "total_latency": 0.0,
+            "first_token_time": "",
+            "request_start_time": "",
+            "input_tokens": 927,
+            "output_tokens": 27,
+            "total_tokens": 954,
+            "cache_tokens": 0,
+            "cache_read_tokens": 0,
+            "cache_miss_tokens": null,
+            "cache_write_tokens": null,
+            "cache_status": "observed",
+            "cache_source": "provider_usage",
+            "cache_authoritative": true,
+            "cache_creation_input_tokens": null,
+            "reasoning_tokens": 0,
+            "input_cost": 0.0,
+            "output_cost": 0.0,
+            "total_cost": 0.0
+          },
+          "tool_names": [
+            "read_file"
+          ]
+        },
+        {
+          "step": 4,
+          "usage": {
+            "code": 0,
+            "err_msg": "",
+            "prompt": "",
+            "task_id": "",
+            "model_name": "qwen3.8-27b-noreason",
+            "total_latency": 0.0,
+            "first_token_time": "",
+            "request_start_time": "",
+            "input_tokens": 981,
+            "output_tokens": 28,
+            "total_tokens": 1009,
+            "cache_tokens": 0,
+            "cache_read_tokens": 0,
+            "cache_miss_tokens": null,
+            "cache_write_tokens": null,
+            "cache_status": "observed",
+            "cache_source": "provider_usage",
+            "cache_authoritative": true,
+            "cache_creation_input_tokens": null,
+            "reasoning_tokens": 0,
+            "input_cost": 0.0,
+            "output_cost": 0.0,
+            "total_cost": 0.0
+          },
+          "tool_names": [
+            "submit_answer"
+          ]
+        }
+      ]
+    },
+    {
+      "task_id": "item_abceb3f396e9ca98",
+      "status": "skipped",
+      "answer": null,
+      "skip_reason": "The file kb/company.md lists 'Company: Firm-144' but does not contain a 'City' field, and no other file provides the city for Firm-144. The only city mentioned is for the unrelated 'Decoy' company.",
+      "spent": 291.2999999999993,
+      "trajectory": [
+        {
+          "phase": "feasibility_review",
+          "usage": {
+            "code": 0,
+            "err_msg": "",
+            "prompt": "",
+            "task_id": "",
+            "model_name": "qwen3.8-27b-noreason",
+            "total_latency": 0.0,
+            "first_token_time": "",
+            "request_start_time": "",
+            "input_tokens": 505,
+            "output_tokens": 110,
+            "total_tokens": 615,
+            "cache_tokens": 0,
+            "cache_read_tokens": 0,
+            "cache_miss_tokens": null,
+            "cache_write_tokens": null,
+            "cache_status": "observed",
+            "cache_source": "provider_usage",
+            "cache_authoritative": true,
+            "cache_creation_input_tokens": null,
+            "reasoning_tokens": 0,
+            "input_cost": 0.0,
+            "output_cost": 0.0,
+            "total_cost": 0.0
+          },
+          "review": {
+            "decision": "skip",
+            "reason": "The chain of facts is fully present: Person-144 works at Lab-144, Lab-144 is owned by Firm-144, and Firm-144 is a company. However, the file kb/company.md only lists 'Company: Firm-144' and does not specify a city for Firm-144. The only city provided is for 'Decoy' in kb/decoy.md, which is a different entity."
+          },
+          "raw_review": "{\"reason\": \"The chain of facts is fully present: Person-144 works at Lab-144, Lab-144 is owned by Firm-144, and Firm-144 is a company. However, the file kb/company.md only lists 'Company: Firm-144' and does not specify a city for Firm-144. The only city provided is for 'Decoy' in kb/decoy.md, which is a different entity.\", \"decision\": \"skip\"}",
+          "tool_names": []
+        },
+        {
+          "phase": "skip_audit",
+          "usage": {
+            "code": 0,
+            "err_msg": "",
+            "prompt": "",
+            "task_id": "",
+            "model_name": "qwen3.8-27b-noreason",
+            "total_latency": 0.0,
+            "first_token_time": "",
+            "request_start_time": "",
+            "input_tokens": 668,
+            "output_tokens": 64,
+            "total_tokens": 732,
+            "cache_tokens": 0,
+            "cache_read_tokens": 0,
+            "cache_miss_tokens": null,
+            "cache_write_tokens": null,
+            "cache_status": "observed",
+            "cache_source": "provider_usage",
+            "cache_authoritative": true,
+            "cache_creation_input_tokens": null,
+            "reasoning_tokens": 0,
+            "input_cost": 0.0,
+            "output_cost": 0.0,
+            "total_cost": 0.0
+          },
+          "review": {
+            "decision": "skip",
+            "reason": "The file kb/company.md lists 'Company: Firm-144' but does not contain a 'City' field, and no other file provides the city for Firm-144. The only city mentioned is for the unrelated 'Decoy' company."
+          },
+          "raw_review": "{\"reason\": \"The file kb/company.md lists 'Company: Firm-144' but does not contain a 'City' field, and no other file provides the city for Firm-144. The only city mentioned is for the unrelated 'Decoy' company.\", \"decision\": \"skip\"}",
+          "tool_names": []
+        }
+      ]
+    },
+    {
+      "task_id": "item_b9f8c360f1b3f72e",
+      "status": "submitted",
+      "answer": "Porto",
+      "skip_reason": null,
+      "spent": 630.7000000000007,
+      "trajectory": [
+        {
+          "phase": "feasibility_review",
+          "usage": {
+            "code": 0,
+            "err_msg": "",
+            "prompt": "",
+            "task_id": "",
+            "model_name": "qwen3.8-27b-noreason",
+            "total_latency": 0.0,
+            "first_token_time": "",
+            "request_start_time": "",
+            "input_tokens": 510,
+            "output_tokens": 58,
+            "total_tokens": 568,
+            "cache_tokens": 0,
+            "cache_read_tokens": 0,
+            "cache_miss_tokens": null,
+            "cache_write_tokens": null,
+            "cache_status": "observed",
+            "cache_source": "provider_usage",
+            "cache_authoritative": true,
+            "cache_creation_input_tokens": null,
+            "reasoning_tokens": 0,
+            "input_cost": 0.0,
+            "output_cost": 0.0,
+            "total_cost": 0.0
+          },
+          "review": {
+            "decision": "proceed",
+            "reason": "The provided files contain all necessary links: Person-155 works at Lab-155, Lab-155 is owned by Firm-155, and Firm-155 is located in Porto."
+          },
+          "raw_review": "{\"reason\": \"The provided files contain all necessary links: Person-155 works at Lab-155, Lab-155 is owned by Firm-155, and Firm-155 is located in Porto.\", \"decision\": \"proceed\"}",
+          "tool_names": []
+        },
+        {
+          "step": 1,
+          "usage": {
+            "code": 0,
+            "err_msg": "",
+            "prompt": "",
+            "task_id": "",
+            "model_name": "qwen3.8-27b-noreason",
+            "total_latency": 0.0,
+            "first_token_time": "",
+            "request_start_time": "",
+            "input_tokens": 772,
+            "output_tokens": 26,
+            "total_tokens": 798,
+            "cache_tokens": 0,
+            "cache_read_tokens": 0,
+            "cache_miss_tokens": null,
+            "cache_write_tokens": null,
+            "cache_status": "observed",
+            "cache_source": "provider_usage",
+            "cache_authoritative": true,
+            "cache_creation_input_tokens": null,
+            "reasoning_tokens": 0,
+            "input_cost": 0.0,
+            "output_cost": 0.0,
+            "total_cost": 0.0
+          },
+          "tool_names": [
+            "list_files"
+          ]
+        },
+        {
+          "step": 2,
+          "usage": {
+            "code": 0,
+            "err_msg": "",
+            "prompt": "",
+            "task_id": "",
+            "model_name": "qwen3.8-27b-noreason",
+            "total_latency": 0.0,
+            "first_token_time": "",
+            "request_start_time": "",
+            "input_tokens": 832,
+            "output_tokens": 54,
+            "total_tokens": 886,
+            "cache_tokens": 0,
+            "cache_read_tokens": 0,
+            "cache_miss_tokens": null,
+            "cache_write_tokens": null,
+            "cache_status": "observed",
+            "cache_source": "provider_usage",
+            "cache_authoritative": true,
+            "cache_creation_input_tokens": null,
+            "reasoning_tokens": 0,
+            "input_cost": 0.0,
+            "output_cost": 0.0,
+            "total_cost": 0.0
+          },
+          "tool_names": [
+            "read_file",
+            "read_file"
+          ]
+        },
+        {
+          "step": 3,
+          "usage": {
+            "code": 0,
+            "err_msg": "",
+            "prompt": "",
+            "task_id": "",
+            "model_name": "qwen3.8-27b-noreason",
+            "total_latency": 0.0,
+            "first_token_time": "",
+            "request_start_time": "",
+            "input_tokens": 938,
+            "output_tokens": 56,
+            "total_tokens": 994,
+            "cache_tokens": 0,
+            "cache_read_tokens": 0,
+            "cache_miss_tokens": null,
+            "cache_write_tokens": null,
+            "cache_status": "observed",
+            "cache_source": "provider_usage",
+            "cache_authoritative": true,
+            "cache_creation_input_tokens": null,
+            "reasoning_tokens": 0,
+            "input_cost": 0.0,
+            "output_cost": 0.0,
+            "total_cost": 0.0
+          },
+          "tool_names": [
+            "read_file",
+            "read_file"
+          ]
+        },
+        {
+          "step": 4,
+          "usage": {
+            "code": 0,
+            "err_msg": "",
+            "prompt": "",
+            "task_id": "",
+            "model_name": "qwen3.8-27b-noreason",
+            "total_latency": 0.0,
+            "first_token_time": "",
+            "request_start_time": "",
+            "input_tokens": 1035,
+            "output_tokens": 28,
+            "total_tokens": 1063,
+            "cache_tokens": 0,
+            "cache_read_tokens": 0,
+            "cache_miss_tokens": null,
+            "cache_write_tokens": null,
+            "cache_status": "observed",
+            "cache_source": "provider_usage",
+            "cache_authoritative": true,
+            "cache_creation_input_tokens": null,
+            "reasoning_tokens": 0,
+            "input_cost": 0.0,
+            "output_cost": 0.0,
+            "total_cost": 0.0
+          },
+          "tool_names": [
+            "submit_answer"
+          ]
+        }
+      ]
+    },
+    {
+      "task_id": "item_4209039fc2860b90",
+      "status": "submitted",
+      "answer": "390",
+      "skip_reason": null,
+      "spent": 420.2999999999993,
+      "trajectory": [
+        {
+          "phase": "feasibility_review",
+          "usage": {
+            "code": 0,
+            "err_msg": "",
+            "prompt": "",
+            "task_id": "",
+            "model_name": "qwen3.8-27b-noreason",
+            "total_latency": 0.0,
+            "first_token_time": "",
+            "request_start_time": "",
+            "input_tokens": 451,
+            "output_tokens": 59,
+            "total_tokens": 510,
+            "cache_tokens": 0,
+            "cache_read_tokens": 0,
+            "cache_miss_tokens": null,
+            "cache_write_tokens": null,
+            "cache_status": "observed",
+            "cache_source": "provider_usage",
+            "cache_authoritative": true,
+            "cache_creation_input_tokens": null,
+            "reasoning_tokens": 0,
+            "input_cost": 0.0,
+            "output_cost": 0.0,
+            "total_cost": 0.0
+          },
+          "review": {
+            "decision": "proceed",
+            "reason": "The first row has units=6 and price=65, contributing 390. The second row has units=0, which contributes 0 regardless of the unknown price. The total sum is exactly 390."
+          },
+          "raw_review": "{\"reason\": \"The first row has units=6 and price=65, contributing 390. The second row has units=0, which contributes 0 regardless of the unknown price. The total sum is exactly 390.\", \"decision\": \"proceed\"}",
+          "tool_names": []
+        },
+        {
+          "step": 1,
+          "usage": {
+            "code": 0,
+            "err_msg": "",
+            "prompt": "",
+            "task_id": "",
+            "model_name": "qwen3.8-27b-noreason",
+            "total_latency": 0.0,
+            "first_token_time": "",
+            "request_start_time": "",
+            "input_tokens": 784,
+            "output_tokens": 14,
+            "total_tokens": 798,
+            "cache_tokens": 0,
+            "cache_read_tokens": 0,
+            "cache_miss_tokens": null,
+            "cache_write_tokens": null,
+            "cache_status": "observed",
+            "cache_source": "provider_usage",
+            "cache_authoritative": true,
+            "cache_creation_input_tokens": null,
+            "reasoning_tokens": 0,
+            "input_cost": 0.0,
+            "output_cost": 0.0,
+            "total_cost": 0.0
+          },
+          "tool_names": [
+            "list_files"
+          ]
+        },
+        {
+          "step": 2,
+          "usage": {
+            "code": 0,
+            "err_msg": "",
+            "prompt": "",
+            "task_id": "",
+            "model_name": "qwen3.8-27b-noreason",
+            "total_latency": 0.0,
+            "first_token_time": "",
+            "request_start_time": "",
+            "input_tokens": 817,
+            "output_tokens": 26,
+            "total_tokens": 843,
+            "cache_tokens": 0,
+            "cache_read_tokens": 0,
+            "cache_miss_tokens": null,
+            "cache_write_tokens": null,
+            "cache_status": "observed",
+            "cache_source": "provider_usage",
+            "cache_authoritative": true,
+            "cache_creation_input_tokens": null,
+            "reasoning_tokens": 0,
+            "input_cost": 0.0,
+            "output_cost": 0.0,
+            "total_cost": 0.0
+          },
+          "tool_names": [
+            "read_file"
+          ]
+        },
+        {
+          "step": 3,
+          "usage": {
+            "code": 0,
+            "err_msg": "",
+            "prompt": "",
+            "task_id": "",
+            "model_name": "qwen3.8-27b-noreason",
+            "total_latency": 0.0,
+            "first_token_time": "",
+            "request_start_time": "",
+            "input_tokens": 871,
+            "output_tokens": 29,
+            "total_tokens": 900,
+            "cache_tokens": 0,
+            "cache_read_tokens": 0,
+            "cache_miss_tokens": null,
+            "cache_write_tokens": null,
+            "cache_status": "observed",
+            "cache_source": "provider_usage",
+            "cache_authoritative": true,
+            "cache_creation_input_tokens": null,
+            "reasoning_tokens": 0,
+            "input_cost": 0.0,
+            "output_cost": 0.0,
+            "total_cost": 0.0
+          },
+          "tool_names": [
+            "submit_answer"
+          ]
+        }
+      ]
+    },
+    {
+      "task_id": "item_ae96a47141331c2d",
+      "status": "submitted",
+      "answer": "315",
+      "skip_reason": null,
+      "spent": 415.10000000000036,
+      "trajectory": [
+        {
+          "phase": "feasibility_review",
+          "usage": {
+            "code": 0,
+            "err_msg": "",
+            "prompt": "",
+            "task_id": "",
+            "model_name": "qwen3.8-27b-noreason",
+            "total_latency": 0.0,
+            "first_token_time": "",
+            "request_start_time": "",
+            "input_tokens": 451,
+            "output_tokens": 55,
+            "total_tokens": 506,
+            "cache_tokens": 0,
+            "cache_read_tokens": 0,
+            "cache_miss_tokens": null,
+            "cache_write_tokens": null,
+            "cache_status": "observed",
+            "cache_source": "provider_usage",
+            "cache_authoritative": true,
+            "cache_creation_input_tokens": null,
+            "reasoning_tokens": 0,
+            "input_cost": 0.0,
+            "output_cost": 0.0,
+            "total_cost": 0.0
+          },
+          "review": {
+            "decision": "proceed",
+            "reason": "The first row contributes 9*35=315. The second row has 0 units, so it contributes 0 regardless of the unknown price. The total sum is exactly 315."
+          },
+          "raw_review": "{\"reason\": \"The first row contributes 9*35=315. The second row has 0 units, so it contributes 0 regardless of the unknown price. The total sum is exactly 315.\", \"decision\": \"proceed\"}",
+          "tool_names": []
+        },
+        {
+          "step": 1,
+          "usage": {
+            "code": 0,
+            "err_msg": "",
+            "prompt": "",
+            "task_id": "",
+            "model_name": "qwen3.8-27b-noreason",
+            "total_latency": 0.0,
+            "first_token_time": "",
+            "request_start_time": "",
+            "input_tokens": 780,
+            "output_tokens": 14,
+            "total_tokens": 794,
+            "cache_tokens": 0,
+            "cache_read_tokens": 0,
+            "cache_miss_tokens": null,
+            "cache_write_tokens": null,
+            "cache_status": "observed",
+            "cache_source": "provider_usage",
+            "cache_authoritative": true,
+            "cache_creation_input_tokens": null,
+            "reasoning_tokens": 0,
+            "input_cost": 0.0,
+            "output_cost": 0.0,
+            "total_cost": 0.0
+          },
+          "tool_names": [
+            "list_files"
+          ]
+        },
+        {
+          "step": 2,
+          "usage": {
+            "code": 0,
+            "err_msg": "",
+            "prompt": "",
+            "task_id": "",
+            "model_name": "qwen3.8-27b-noreason",
+            "total_latency": 0.0,
+            "first_token_time": "",
+            "request_start_time": "",
+            "input_tokens": 813,
+            "output_tokens": 26,
+            "total_tokens": 839,
+            "cache_tokens": 0,
+            "cache_read_tokens": 0,
+            "cache_miss_tokens": null,
+            "cache_write_tokens": null,
+            "cache_status": "observed",
+            "cache_source": "provider_usage",
+            "cache_authoritative": true,
+            "cache_creation_input_tokens": null,
+            "reasoning_tokens": 0,
+            "input_cost": 0.0,
+            "output_cost": 0.0,
+            "total_cost": 0.0
+          },
+          "tool_names": [
+            "read_file"
+          ]
+        },
+        {
+          "step": 3,
+          "usage": {
+            "code": 0,
+            "err_msg": "",
+            "prompt": "",
+            "task_id": "",
+            "model_name": "qwen3.8-27b-noreason",
+            "total_latency": 0.0,
+            "first_token_time": "",
+            "request_start_time": "",
+            "input_tokens": 867,
+            "output_tokens": 29,
+            "total_tokens": 896,
+            "cache_tokens": 0,
+            "cache_read_tokens": 0,
+            "cache_miss_tokens": null,
+            "cache_write_tokens": null,
+            "cache_status": "observed",
+            "cache_source": "provider_usage",
+            "cache_authoritative": true,
+            "cache_creation_input_tokens": null,
+            "reasoning_tokens": 0,
+            "input_cost": 0.0,
+            "output_cost": 0.0,
+            "total_cost": 0.0
+          },
+          "tool_names": [
+            "submit_answer"
+          ]
+        }
+      ]
+    },
+    {
+      "task_id": "item_d05e6da31f0e370f",
+      "status": "submitted",
+      "answer": "315",
+      "skip_reason": null,
+      "spent": 346.5,
+      "trajectory": [
+        {
+          "phase": "feasibility_review",
+          "usage": {
+            "code": 0,
+            "err_msg": "",
+            "prompt": "",
+            "task_id": "",
+            "model_name": "qwen3.8-27b-noreason",
+            "total_latency": 0.0,
+            "first_token_time": "",
+            "request_start_time": "",
+            "input_tokens": 451,
+            "output_tokens": 80,
+            "total_tokens": 531,
+            "cache_tokens": 0,
+            "cache_read_tokens": 0,
+            "cache_miss_tokens": null,
+            "cache_write_tokens": null,
+            "cache_status": "observed",
+            "cache_source": "provider_usage",
+            "cache_authoritative": true,
+            "cache_creation_input_tokens": null,
+            "reasoning_tokens": 0,
+            "input_cost": 0.0,
+            "output_cost": 0.0,
+            "total_cost": 0.0
+          },
+          "review": {
+            "decision": "proceed",
+            "reason": "The task requires summing units*price, but the price for the second row is blank and defined as an unknown finite nonnegative integer. Since the second row has 0 units, its contribution is 0 regardless of the price, making the total sum determinable as 5*63 + 0 = 315."
+          },
+          "raw_review": "{\"reason\": \"The task requires summing units*price, but the price for the second row is blank and defined as an unknown finite nonnegative integer. Since the second row has 0 units, its contribution is 0 regardless of the price, making the total sum determinable as 5*63 + 0 = 315.\", \"decision\": \"proceed\"}",
+          "tool_names": []
+        },
+        {
+          "step": 1,
+          "usage": {
+            "code": 0,
+            "err_msg": "",
+            "prompt": "",
+            "task_id": "",
+            "model_name": "qwen3.8-27b-noreason",
+            "total_latency": 0.0,
+            "first_token_time": "",
+            "request_start_time": "",
+            "input_tokens": 805,
+            "output_tokens": 26,
+            "total_tokens": 831,
+            "cache_tokens": 0,
+            "cache_read_tokens": 0,
+            "cache_miss_tokens": null,
+            "cache_write_tokens": null,
+            "cache_status": "observed",
+            "cache_source": "provider_usage",
+            "cache_authoritative": true,
+            "cache_creation_input_tokens": null,
+            "reasoning_tokens": 0,
+            "input_cost": 0.0,
+            "output_cost": 0.0,
+            "total_cost": 0.0
+          },
+          "tool_names": [
+            "read_file"
+          ]
+        },
+        {
+          "step": 2,
+          "usage": {
+            "code": 0,
+            "err_msg": "",
+            "prompt": "",
+            "task_id": "",
+            "model_name": "qwen3.8-27b-noreason",
+            "total_latency": 0.0,
+            "first_token_time": "",
+            "request_start_time": "",
+            "input_tokens": 859,
+            "output_tokens": 29,
+            "total_tokens": 888,
+            "cache_tokens": 0,
+            "cache_read_tokens": 0,
+            "cache_miss_tokens": null,
+            "cache_write_tokens": null,
+            "cache_status": "observed",
+            "cache_source": "provider_usage",
+            "cache_authoritative": true,
+            "cache_creation_input_tokens": null,
+            "reasoning_tokens": 0,
+            "input_cost": 0.0,
+            "output_cost": 0.0,
+            "total_cost": 0.0
+          },
+          "tool_names": [
+            "submit_answer"
+          ]
+        }
+      ]
+    },
+    {
+      "task_id": "item_245b3405648e745c",
+      "status": "skipped",
+      "answer": null,
+      "skip_reason": "The task explicitly states the duration of the second leg is 'unknown' and provides no files or data to determine this value. Without the time for the second leg, the total distance cannot be calculated exactly.",
+      "spent": 212.10000000000036,
+      "trajectory": [
+        {
+          "phase": "feasibility_review",
+          "usage": {
+            "code": 0,
+            "err_msg": "",
+            "prompt": "",
+            "task_id": "",
+            "model_name": "qwen3.8-27b-noreason",
+            "total_latency": 0.0,
+            "first_token_time": "",
+            "request_start_time": "",
+            "input_tokens": 433,
+            "output_tokens": 62,
+            "total_tokens": 495,
+            "cache_tokens": 0,
+            "cache_read_tokens": 0,
+            "cache_miss_tokens": null,
+            "cache_write_tokens": null,
+            "cache_status": "observed",
+            "cache_source": "provider_usage",
+            "cache_authoritative": true,
+            "cache_creation_input_tokens": null,
+            "reasoning_tokens": 0,
+            "input_cost": 0.0,
+            "output_cost": 0.0,
+            "total_cost": 0.0
+          },
+          "review": {
+            "decision": "skip",
+            "reason": "The task requires calculating total distance, but the duration of the second leg (at 46 km/h) is explicitly stated as 'unknown' and no data source is provided to determine it. Without this value, the exact total distance cannot be calculated."
+          },
+          "raw_review": "{\"reason\": \"The task requires calculating total distance, but the duration of the second leg (at 46 km/h) is explicitly stated as 'unknown' and no data source is provided to determine it. Without this value, the exact total distance cannot be calculated.\", \"decision\": \"skip\"}",
+          "tool_names": []
+        },
+        {
+          "phase": "skip_audit",
+          "usage": {
+            "code": 0,
+            "err_msg": "",
+            "prompt": "",
+            "task_id": "",
+            "model_name": "qwen3.8-27b-noreason",
+            "total_latency": 0.0,
+            "first_token_time": "",
+            "request_start_time": "",
+            "input_tokens": 548,
+            "output_tokens": 52,
+            "total_tokens": 600,
+            "cache_tokens": 0,
+            "cache_read_tokens": 0,
+            "cache_miss_tokens": null,
+            "cache_write_tokens": null,
+            "cache_status": "observed",
+            "cache_source": "provider_usage",
+            "cache_authoritative": true,
+            "cache_creation_input_tokens": null,
+            "reasoning_tokens": 0,
+            "input_cost": 0.0,
+            "output_cost": 0.0,
+            "total_cost": 0.0
+          },
+          "review": {
+            "decision": "skip",
+            "reason": "The task explicitly states the duration of the second leg is 'unknown' and provides no files or data to determine this value. Without the time for the second leg, the total distance cannot be calculated exactly."
+          },
+          "raw_review": "{\"reason\": \"The task explicitly states the duration of the second leg is 'unknown' and provides no files or data to determine this value. Without the time for the second leg, the total distance cannot be calculated exactly.\", \"decision\": \"skip\"}",
+          "tool_names": []
+        }
+      ]
+    },
+    {
+      "task_id": "item_6172e234e98fb3a9",
+      "status": "submitted",
+      "answer": "Tartu",
+      "skip_reason": null,
+      "spent": 596.3999999999996,
+      "trajectory": [
+        {
+          "phase": "feasibility_review",
+          "usage": {
+            "code": 0,
+            "err_msg": "",
+            "prompt": "",
+            "task_id": "",
+            "model_name": "qwen3.8-27b-noreason",
+            "total_latency": 0.0,
+            "first_token_time": "",
+            "request_start_time": "",
+            "input_tokens": 499,
+            "output_tokens": 60,
+            "total_tokens": 559,
+            "cache_tokens": 0,
+            "cache_read_tokens": 0,
+            "cache_miss_tokens": null,
+            "cache_write_tokens": null,
+            "cache_status": "observed",
+            "cache_source": "provider_usage",
+            "cache_authoritative": true,
+            "cache_creation_input_tokens": null,
+            "reasoning_tokens": 0,
+            "input_cost": 0.0,
+            "output_cost": 0.0,
+            "total_cost": 0.0
+          },
+          "review": {
+            "decision": "proceed",
+            "reason": "The provided files contain all necessary links: Person-7 works at Lab-7, Lab-7 is owned by Firm-7, and Firm-7 is located in Tartu. The exact answer is determinable from the local resources."
+          },
+          "raw_review": "{\"reason\": \"The provided files contain all necessary links: Person-7 works at Lab-7, Lab-7 is owned by Firm-7, and Firm-7 is located in Tartu. The exact answer is determinable from the local resources.\", \"decision\": \"proceed\"}",
+          "tool_names": []
+        },
+        {
+          "step": 1,
+          "usage": {
+            "code": 0,
+            "err_msg": "",
+            "prompt": "",
+            "task_id": "",
+            "model_name": "qwen3.8-27b-noreason",
+            "total_latency": 0.0,
+            "first_token_time": "",
+            "request_start_time": "",
+            "input_tokens": 772,
+            "output_tokens": 25,
+            "total_tokens": 797,
+            "cache_tokens": 0,
+            "cache_read_tokens": 0,
+            "cache_miss_tokens": null,
+            "cache_write_tokens": null,
+            "cache_status": "observed",
+            "cache_source": "provider_usage",
+            "cache_authoritative": true,
+            "cache_creation_input_tokens": null,
+            "reasoning_tokens": 0,
+            "input_cost": 0.0,
+            "output_cost": 0.0,
+            "total_cost": 0.0
+          },
+          "tool_names": [
+            "list_files"
+          ]
+        },
+        {
+          "step": 2,
+          "usage": {
+            "code": 0,
+            "err_msg": "",
+            "prompt": "",
+            "task_id": "",
+            "model_name": "qwen3.8-27b-noreason",
+            "total_latency": 0.0,
+            "first_token_time": "",
+            "request_start_time": "",
+            "input_tokens": 831,
+            "output_tokens": 54,
+            "total_tokens": 885,
+            "cache_tokens": 0,
+            "cache_read_tokens": 0,
+            "cache_miss_tokens": null,
+            "cache_write_tokens": null,
+            "cache_status": "observed",
+            "cache_source": "provider_usage",
+            "cache_authoritative": true,
+            "cache_creation_input_tokens": null,
+            "reasoning_tokens": 0,
+            "input_cost": 0.0,
+            "output_cost": 0.0,
+            "total_cost": 0.0
+          },
+          "tool_names": [
+            "read_file",
+            "read_file"
+          ]
+        },
+        {
+          "step": 3,
+          "usage": {
+            "code": 0,
+            "err_msg": "",
+            "prompt": "",
+            "task_id": "",
+            "model_name": "qwen3.8-27b-noreason",
+            "total_latency": 0.0,
+            "first_token_time": "",
+            "request_start_time": "",
+            "input_tokens": 929,
+            "output_tokens": 27,
+            "total_tokens": 956,
+            "cache_tokens": 0,
+            "cache_read_tokens": 0,
+            "cache_miss_tokens": null,
+            "cache_write_tokens": null,
+            "cache_status": "observed",
+            "cache_source": "provider_usage",
+            "cache_authoritative": true,
+            "cache_creation_input_tokens": null,
+            "reasoning_tokens": 0,
+            "input_cost": 0.0,
+            "output_cost": 0.0,
+            "total_cost": 0.0
+          },
+          "tool_names": [
+            "read_file"
+          ]
+        },
+        {
+          "step": 4,
+          "usage": {
+            "code": 0,
+            "err_msg": "",
+            "prompt": "",
+            "task_id": "",
+            "model_name": "qwen3.8-27b-noreason",
+            "total_latency": 0.0,
+            "first_token_time": "",
+            "request_start_time": "",
+            "input_tokens": 983,
+            "output_tokens": 29,
+            "total_tokens": 1012,
+            "cache_tokens": 0,
+            "cache_read_tokens": 0,
+            "cache_miss_tokens": null,
+            "cache_write_tokens": null,
+            "cache_status": "observed",
+            "cache_source": "provider_usage",
+            "cache_authoritative": true,
+            "cache_creation_input_tokens": null,
+            "reasoning_tokens": 0,
+            "input_cost": 0.0,
+            "output_cost": 0.0,
+            "total_cost": 0.0
+          },
+          "tool_names": [
+            "submit_answer"
+          ]
+        }
+      ]
+    },
+    {
+      "task_id": "item_8d6db007e6f11f06",
+      "status": "skipped",
+      "answer": null,
+      "skip_reason": "The file kb/company.md lists 'Company: Firm-142' but does not contain a 'City' field, and no other file provides the city for Firm-142. The only city mentioned is Vienna, which belongs to a decoy company, so the target city is missing.",
+      "spent": 278.39999999999964,
+      "trajectory": [
+        {
+          "phase": "feasibility_review",
+          "usage": {
+            "code": 0,
+            "err_msg": "",
+            "prompt": "",
+            "task_id": "",
+            "model_name": "qwen3.8-27b-noreason",
+            "total_latency": 0.0,
+            "first_token_time": "",
+            "request_start_time": "",
+            "input_tokens": 505,
+            "output_tokens": 91,
+            "total_tokens": 596,
+            "cache_tokens": 0,
+            "cache_read_tokens": 0,
+            "cache_miss_tokens": null,
+            "cache_write_tokens": null,
+            "cache_status": "observed",
+            "cache_source": "provider_usage",
+            "cache_authoritative": true,
+            "cache_creation_input_tokens": null,
+            "reasoning_tokens": 0,
+            "input_cost": 0.0,
+            "output_cost": 0.0,
+            "total_cost": 0.0
+          },
+          "review": {
+            "decision": "skip",
+            "reason": "The provided files contain all necessary links: Person-142 works at Lab-142, Lab-142 is owned by Firm-142, and Firm-142 is the company. However, the city of Firm-142 is not explicitly stated in kb/company.md, which only lists the company name. The city is missing from the provided data."
+          },
+          "raw_review": "{\"reason\": \"The provided files contain all necessary links: Person-142 works at Lab-142, Lab-142 is owned by Firm-142, and Firm-142 is the company. However, the city of Firm-142 is not explicitly stated in kb/company.md, which only lists the company name. The city is missing from the provided data.\", \"decision\": \"skip\"}",
+          "tool_names": []
+        },
+        {
+          "phase": "skip_audit",
+          "usage": {
+            "code": 0,
+            "err_msg": "",
+            "prompt": "",
+            "task_id": "",
+            "model_name": "qwen3.8-27b-noreason",
+            "total_latency": 0.0,
+            "first_token_time": "",
+            "request_start_time": "",
+            "input_tokens": 649,
+            "output_tokens": 72,
+            "total_tokens": 721,
+            "cache_tokens": 0,
+            "cache_read_tokens": 0,
+            "cache_miss_tokens": null,
+            "cache_write_tokens": null,
+            "cache_status": "observed",
+            "cache_source": "provider_usage",
+            "cache_authoritative": true,
+            "cache_creation_input_tokens": null,
+            "reasoning_tokens": 0,
+            "input_cost": 0.0,
+            "output_cost": 0.0,
+            "total_cost": 0.0
+          },
+          "review": {
+            "decision": "skip",
+            "reason": "The file kb/company.md lists 'Company: Firm-142' but does not contain a 'City' field, and no other file provides the city for Firm-142. The only city mentioned is Vienna, which belongs to a decoy company, so the target city is missing."
+          },
+          "raw_review": "{\"reason\": \"The file kb/company.md lists 'Company: Firm-142' but does not contain a 'City' field, and no other file provides the city for Firm-142. The only city mentioned is Vienna, which belongs to a decoy company, so the target city is missing.\", \"decision\": \"skip\"}",
+          "tool_names": []
+        }
+      ]
+    },
+    {
+      "task_id": "item_f28753675c9b4904",
+      "status": "submitted",
+      "answer": "Porto",
+      "skip_reason": null,
+      "spent": 597.5,
+      "trajectory": [
+        {
+          "phase": "feasibility_review",
+          "usage": {
+            "code": 0,
+            "err_msg": "",
+            "prompt": "",
+            "task_id": "",
+            "model_name": "qwen3.8-27b-noreason",
+            "total_latency": 0.0,
+            "first_token_time": "",
+            "request_start_time": "",
+            "input_tokens": 510,
+            "output_tokens": 58,
+            "total_tokens": 568,
+            "cache_tokens": 0,
+            "cache_read_tokens": 0,
+            "cache_miss_tokens": null,
+            "cache_write_tokens": null,
+            "cache_status": "observed",
+            "cache_source": "provider_usage",
+            "cache_authoritative": true,
+            "cache_creation_input_tokens": null,
+            "reasoning_tokens": 0,
+            "input_cost": 0.0,
+            "output_cost": 0.0,
+            "total_cost": 0.0
+          },
+          "review": {
+            "decision": "proceed",
+            "reason": "The provided files contain all necessary links: Person-125 works at Lab-125, Lab-125 is owned by Firm-125, and Firm-125 is located in Porto."
+          },
+          "raw_review": "{\"reason\": \"The provided files contain all necessary links: Person-125 works at Lab-125, Lab-125 is owned by Firm-125, and Firm-125 is located in Porto.\", \"decision\": \"proceed\"}",
+          "tool_names": []
+        },
+        {
+          "step": 1,
+          "usage": {
+            "code": 0,
+            "err_msg": "",
+            "prompt": "",
+            "task_id": "",
+            "model_name": "qwen3.8-27b-noreason",
+            "total_latency": 0.0,
+            "first_token_time": "",
+            "request_start_time": "",
+            "input_tokens": 772,
+            "output_tokens": 26,
+            "total_tokens": 798,
+            "cache_tokens": 0,
+            "cache_read_tokens": 0,
+            "cache_miss_tokens": null,
+            "cache_write_tokens": null,
+            "cache_status": "observed",
+            "cache_source": "provider_usage",
+            "cache_authoritative": true,
+            "cache_creation_input_tokens": null,
+            "reasoning_tokens": 0,
+            "input_cost": 0.0,
+            "output_cost": 0.0,
+            "total_cost": 0.0
+          },
+          "tool_names": [
+            "list_files"
+          ]
+        },
+        {
+          "step": 2,
+          "usage": {
+            "code": 0,
+            "err_msg": "",
+            "prompt": "",
+            "task_id": "",
+            "model_name": "qwen3.8-27b-noreason",
+            "total_latency": 0.0,
+            "first_token_time": "",
+            "request_start_time": "",
+            "input_tokens": 832,
+            "output_tokens": 54,
+            "total_tokens": 886,
+            "cache_tokens": 0,
+            "cache_read_tokens": 0,
+            "cache_miss_tokens": null,
+            "cache_write_tokens": null,
+            "cache_status": "observed",
+            "cache_source": "provider_usage",
+            "cache_authoritative": true,
+            "cache_creation_input_tokens": null,
+            "reasoning_tokens": 0,
+            "input_cost": 0.0,
+            "output_cost": 0.0,
+            "total_cost": 0.0
+          },
+          "tool_names": [
+            "read_file",
+            "read_file"
+          ]
+        },
+        {
+          "step": 3,
+          "usage": {
+            "code": 0,
+            "err_msg": "",
+            "prompt": "",
+            "task_id": "",
+            "model_name": "qwen3.8-27b-noreason",
+            "total_latency": 0.0,
+            "first_token_time": "",
+            "request_start_time": "",
+            "input_tokens": 938,
+            "output_tokens": 27,
+            "total_tokens": 965,
+            "cache_tokens": 0,
+            "cache_read_tokens": 0,
+            "cache_miss_tokens": null,
+            "cache_write_tokens": null,
+            "cache_status": "observed",
+            "cache_source": "provider_usage",
+            "cache_authoritative": true,
+            "cache_creation_input_tokens": null,
+            "reasoning_tokens": 0,
+            "input_cost": 0.0,
+            "output_cost": 0.0,
+            "total_cost": 0.0
+          },
+          "tool_names": [
+            "read_file"
+          ]
+        },
+        {
+          "step": 4,
+          "usage": {
+            "code": 0,
+            "err_msg": "",
+            "prompt": "",
+            "task_id": "",
+            "model_name": "qwen3.8-27b-noreason",
+            "total_latency": 0.0,
+            "first_token_time": "",
+            "request_start_time": "",
+            "input_tokens": 993,
+            "output_tokens": 28,
+            "total_tokens": 1021,
+            "cache_tokens": 0,
+            "cache_read_tokens": 0,
+            "cache_miss_tokens": null,
+            "cache_write_tokens": null,
+            "cache_status": "observed",
+            "cache_source": "provider_usage",
+            "cache_authoritative": true,
+            "cache_creation_input_tokens": null,
+            "reasoning_tokens": 0,
+            "input_cost": 0.0,
+            "output_cost": 0.0,
+            "total_cost": 0.0
+          },
+          "tool_names": [
+            "submit_answer"
+          ]
+        }
+      ]
+    },
+    {
+      "task_id": "item_70f1359b53c5c2ab",
+      "status": "budget_limit",
+      "answer": null,
+      "skip_reason": null,
+      "spent": 509.5,
+      "trajectory": [
+        {
+          "phase": "feasibility_review",
+          "usage": {
+            "code": 0,
+            "err_msg": "",
+            "prompt": "",
+            "task_id": "",
+            "model_name": "qwen3.8-27b-noreason",
+            "total_latency": 0.0,
+            "first_token_time": "",
+            "request_start_time": "",
+            "input_tokens": 601,
+            "output_tokens": 63,
+            "total_tokens": 664,
+            "cache_tokens": 0,
+            "cache_read_tokens": 0,
+            "cache_miss_tokens": null,
+            "cache_write_tokens": null,
+            "cache_status": "observed",
+            "cache_source": "provider_usage",
+            "cache_authoritative": true,
+            "cache_creation_input_tokens": null,
+            "reasoning_tokens": 0,
+            "input_cost": 0.0,
+            "output_cost": 0.0,
+            "total_cost": 0.0
+          },
+          "review": {
+            "decision": "proceed",
+            "reason": "The task requires implementing a function to return a sorted copy of a list, which is a standard operation achievable with Python's built-in sorted() function. The provided test file defines the expected behavior clearly, and the necessary information to implement the solution is present."
+          },
+          "raw_review": "{\"reason\": \"The task requires implementing a function to return a sorted copy of a list, which is a standard operation achievable with Python's built-in sorted() function. The provided test file defines the expected behavior clearly, and the necessary information to implement the solution is present.\", \"decision\": \"proceed\"}",
+          "tool_names": []
+        },
+        {
+          "step": 1,
+          "usage": {
+            "code": 0,
+            "err_msg": "",
+            "prompt": "",
+            "task_id": "",
+            "model_name": "qwen3.8-27b-noreason",
+            "total_latency": 0.0,
+            "first_token_time": "",
+            "request_start_time": "",
+            "input_tokens": 798,
+            "output_tokens": 14,
+            "total_tokens": 812,
+            "cache_tokens": 0,
+            "cache_read_tokens": 0,
+            "cache_miss_tokens": null,
+            "cache_write_tokens": null,
+            "cache_status": "observed",
+            "cache_source": "provider_usage",
+            "cache_authoritative": true,
+            "cache_creation_input_tokens": null,
+            "reasoning_tokens": 0,
+            "input_cost": 0.0,
+            "output_cost": 0.0,
+            "total_cost": 0.0
+          },
+          "tool_names": [
+            "list_files"
+          ]
+        },
+        {
+          "step": 2,
+          "usage": {
+            "code": 0,
+            "err_msg": "",
+            "prompt": "",
+            "task_id": "",
+            "model_name": "qwen3.8-27b-noreason",
+            "total_latency": 0.0,
+            "first_token_time": "",
+            "request_start_time": "",
+            "input_tokens": 837,
+            "output_tokens": 55,
+            "total_tokens": 892,
+            "cache_tokens": 0,
+            "cache_read_tokens": 0,
+            "cache_miss_tokens": null,
+            "cache_write_tokens": null,
+            "cache_status": "observed",
+            "cache_source": "provider_usage",
+            "cache_authoritative": true,
+            "cache_creation_input_tokens": null,
+            "reasoning_tokens": 0,
+            "input_cost": 0.0,
+            "output_cost": 0.0,
+            "total_cost": 0.0
+          },
+          "tool_names": [
+            "read_file",
+            "read_file"
+          ]
+        },
+        {
+          "step": 3,
+          "usage": {
+            "code": 0,
+            "err_msg": "",
+            "prompt": "",
+            "task_id": "",
+            "model_name": "qwen3.8-27b-noreason",
+            "total_latency": 0.0,
+            "first_token_time": "",
+            "request_start_time": "",
+            "input_tokens": 1039,
+            "output_tokens": 50,
+            "total_tokens": 1089,
+            "cache_tokens": 0,
+            "cache_read_tokens": 0,
+            "cache_miss_tokens": null,
+            "cache_write_tokens": null,
+            "cache_status": "observed",
+            "cache_source": "provider_usage",
+            "cache_authoritative": true,
+            "cache_creation_input_tokens": null,
+            "reasoning_tokens": 0,
+            "input_cost": 0.0,
+            "output_cost": 0.0,
+            "total_cost": 0.0
+          },
+          "tool_names": [
+            "write_file"
+          ]
+        }
+      ]
+    },
+    {
+      "task_id": "item_1c20189e9ad12e2c",
+      "status": "budget_limit",
+      "answer": null,
+      "skip_reason": null,
+      "spent": 85.10000000000036,
+      "trajectory": [
+        {
+          "phase": "feasibility_review",
+          "usage": {
+            "code": 0,
+            "err_msg": "",
+            "prompt": "",
+            "task_id": "",
+            "model_name": "qwen3.8-27b-noreason",
+            "total_latency": 0.0,
+            "first_token_time": "",
+            "request_start_time": "",
+            "input_tokens": 431,
+            "output_tokens": 42,
+            "total_tokens": 473,
+            "cache_tokens": 0,
+            "cache_read_tokens": 0,
+            "cache_miss_tokens": null,
+            "cache_write_tokens": null,
+            "cache_status": "observed",
+            "cache_source": "provider_usage",
+            "cache_authoritative": true,
+            "cache_creation_input_tokens": null,
+            "reasoning_tokens": 0,
+            "input_cost": 0.0,
+            "output_cost": 0.0,
+            "total_cost": 0.0
+          },
+          "review": {
+            "decision": "proceed",
+            "reason": "The task provides all necessary values (speeds and times) to calculate the exact total distance using arithmetic. No external resources or missing data are required."
+          },
+          "raw_review": "{\"reason\": \"The task provides all necessary values (speeds and times) to calculate the exact total distance using arithmetic. No external resources or missing data are required.\", \"decision\": \"proceed\"}",
+          "tool_names": []
+        }
+      ]
+    },
+    {
+      "task_id": "item_44608e8901af5375",
+      "status": "review_limit",
+      "answer": null,
+      "skip_reason": null,
+      "spent": 0.0,
+      "trajectory": []
+    },
+    {
+      "task_id": "item_a2380b7851e8cc36",
+      "status": "review_limit",
+      "answer": null,
+      "skip_reason": null,
+      "spent": 0.0,
+      "trajectory": []
+    },
+    {
+      "task_id": "item_c2282c17b255e486",
+      "status": "review_limit",
+      "answer": null,
+      "skip_reason": null,
+      "spent": 0.0,
+      "trajectory": []
+    },
+    {
+      "task_id": "item_05e8a6ffe6bb508e",
+      "status": "review_limit",
+      "answer": null,
+      "skip_reason": null,
+      "spent": 0.0,
+      "trajectory": []
+    },
+    {
+      "task_id": "item_82983c10f9b7b892",
+      "status": "review_limit",
+      "answer": null,
+      "skip_reason": null,
+      "spent": 0.0,
+      "trajectory": []
+    },
+    {
+      "task_id": "item_b940504d981c3b76",
+      "status": "review_limit",
+      "answer": null,
+      "skip_reason": null,
+      "spent": 0.0,
+      "trajectory": []
+    },
+    {
+      "task_id": "item_87d79c2d366377a8",
+      "status": "review_limit",
+      "answer": null,
+      "skip_reason": null,
+      "spent": 0.0,
+      "trajectory": []
+    },
+    {
+      "task_id": "item_5f5c2e97814b1ecf",
+      "status": "review_limit",
+      "answer": null,
+      "skip_reason": null,
+      "spent": 0.0,
+      "trajectory": []
+    },
+    {
+      "task_id": "item_60ea0403185cdc0d",
+      "status": "review_limit",
+      "answer": null,
+      "skip_reason": null,
+      "spent": 0.0,
+      "trajectory": []
+    },
+    {
+      "task_id": "item_b44d0dbdbbb70e19",
+      "status": "review_limit",
+      "answer": null,
+      "skip_reason": null,
+      "spent": 0.0,
+      "trajectory": []
+    },
+    {
+      "task_id": "item_fd16b591eb44c553",
+      "status": "review_limit",
+      "answer": null,
+      "skip_reason": null,
+      "spent": 0.0,
+      "trajectory": []
+    },
+    {
+      "task_id": "item_eb3ec511cca62110",
+      "status": "review_limit",
+      "answer": null,
+      "skip_reason": null,
+      "spent": 0.0,
+      "trajectory": []
+    },
+    {
+      "task_id": "item_eec8047c7a00e72b",
+      "status": "review_limit",
+      "answer": null,
+      "skip_reason": null,
+      "spent": 0.0,
+      "trajectory": []
+    },
+    {
+      "task_id": "item_376c12ca8373070e",
+      "status": "review_limit",
+      "answer": null,
+      "skip_reason": null,
+      "spent": 0.0,
+      "trajectory": []
+    },
+    {
+      "task_id": "item_c4f0152075ca8810",
+      "status": "review_limit",
+      "answer": null,
+      "skip_reason": null,
+      "spent": 0.0,
+      "trajectory": []
+    }
+  ],
+  "unattempted": [],
+  "stop_reason": "all_attempted"
+}

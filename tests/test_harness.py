@@ -211,6 +211,17 @@ class HarnessTests(unittest.TestCase):
         self.assertEqual(report["results"][0]["trajectory"][0]["phase"], "feasibility_review")
         self.assertEqual(requests[0]["response_format"], {"type": "json_object"})
 
+    def test_knapsack_no_fit_still_saves_an_empty_report_without_spending(self):
+        args=SimpleNamespace(model="qwen3.8-27b-noreason",budget=1,time_limit=10,
+                             planner="knapsack",report=self.root/"empty-plan.json")
+        with patch.dict("os.environ", {"LLM_BASE_URL":"http://127.0.0.1:9/v1","LLM_API_KEY":"local-test"}):
+            self.assertEqual(asyncio.run(run_tasks([self.task],args)),0)
+        report=json.loads(args.report.read_text())
+        self.assertEqual(report["spent"],0)
+        self.assertEqual(report["results"],[])
+        self.assertEqual(report["unattempted"],[self.task.task_id])
+        self.assertEqual(report["stop_reason"],"planner_no_fit")
+
 
 if __name__ == "__main__":
     unittest.main()

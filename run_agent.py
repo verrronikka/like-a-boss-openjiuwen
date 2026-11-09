@@ -27,6 +27,8 @@ def main(argv=None):
     parser.add_argument("--tasks-dir", required=True, type=Path)
     parser.add_argument("--dry-run", action="store_true", help="List the plan without calling a model or changing files")
     parser.add_argument("--model", choices=ALLOWED_MODELS, default="qwen3.8-27b-noreason")
+    parser.add_argument("--planner", choices=("density", "knapsack"), default="density",
+                        help="Experimental knapsack uses estimated costs with 25%% margin; density remains default")
     parser.add_argument("--budget", type=int, help="Optional local cap; never exceeds BUDGET (default 100000)")
     parser.add_argument("--task-budget", type=int, default=4000)
     parser.add_argument("--max-steps", type=int, default=8)
@@ -53,7 +55,14 @@ def main(argv=None):
         if args.limit:
             tasks = tasks[:args.limit]
         if args.dry_run:
-            print(json.dumps([task.summary() for task in tasks], ensure_ascii=False, indent=2))
+            if args.planner == "knapsack":
+                from planning import knapsack_select
+                selected=knapsack_select(tasks,args.budget)
+                preview={"planner":"knapsack","budget":args.budget,"tasks":[t.summary() for t in selected],
+                         "not_selected":len(tasks)-len(selected),"note":"Conditional plan using estimated, not actual, costs"}
+            else:
+                preview=[task.summary() for task in tasks]
+            print(json.dumps(preview, ensure_ascii=False, indent=2))
             return 0
         for task in tasks:
             if (task.directory / "answer.txt").exists() or (task.workspace / "answer.txt").exists():

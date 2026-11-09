@@ -10,6 +10,7 @@ import tempfile
 import time
 from dataclasses import dataclass
 from pathlib import Path
+from planning import knapsack_select
 
 ALLOWED_MODELS = ("qwen3.8-27b", "qwen3.8-27b-noreason", "qwen3.6-35b-a3b", "qwen3.6-35b-a3b-noreason")
 BASE_COST = {"search": 350, "math": 450, "data_analysis": 700, "coding": 1800}
@@ -413,9 +414,22 @@ async def run_tasks(tasks, args):
     report_path = args.report or tasks[0].directory.parent / "agent-report.json"
     results = []
     failed = False
-    for task in tasks:
+    pending = list(tasks)
+    planner = getattr(args, "planner", "density")
+    stop_reason = "all_attempted"
+    while pending:
         if budget.remaining <= 0 or time.monotonic() >= deadline:
+            stop_reason = "budget_or_time_limit"
             break
+        if planner == "knapsack":
+            selected = knapsack_select(pending, budget.remaining)
+            if not selected:
+                stop_reason = "planner_no_fit"
+                break
+            task = selected[0]  # tasks are already sorted by density; replan after actual usage.
+        else:
+            task = pending[0]
+        pending.remove(task)
         print(f"Solving {task.task_id}; remaining budget: {budget.remaining:.1f}", flush=True)
         try:
             result = await solve(task, model, budget, args, deadline)
@@ -424,10 +438,14 @@ async def run_tasks(tasks, args):
             result = {"task_id": task.task_id, "status": "error", "error_type": type(exc).__name__}
             failed = True
         results.append(result)
-        atomic_text(report_path, json.dumps({"model": args.model, "budget": args.budget,
+        atomic_text(report_path, json.dumps({"model": args.model, "planner": planner, "budget": args.budget,
                     "spent": budget.spent, "results": results}, ensure_ascii=False, indent=2))
         print(f"{task.task_id}: {result['status']}", flush=True)
         if failed:
             # Unknown usage or an API failure: preserve progress and stop instead of retrying blindly.
+            stop_reason = "api_error"
             break
+    atomic_text(report_path, json.dumps({"model": args.model, "planner": planner, "budget": args.budget,
+        "spent": budget.spent, "results": results, "unattempted": [t.task_id for t in pending],
+        "stop_reason": stop_reason}, ensure_ascii=False, indent=2))
     return 1 if failed else 0
