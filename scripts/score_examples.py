@@ -7,9 +7,11 @@ import sys
 from pathlib import Path
 
 
-def score_examples(reference_dir, tasks_dir):
+def score_examples(reference_dir, tasks_dir, task_ids=None):
     results = []
     for metadata in sorted(Path(reference_dir).resolve().glob("*/task.json")):
+        if task_ids is not None and metadata.parent.name not in task_ids:
+            continue
         task = json.loads(metadata.read_text(encoding="utf-8"))
         if "expected" not in task:
             raise ValueError("Local scoring requires the sample expected field; hidden tasks cannot be scored here")
