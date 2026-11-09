@@ -31,6 +31,8 @@ def main(argv=None):
     parser.add_argument("--task-budget", type=int, default=4000)
     parser.add_argument("--max-steps", type=int, default=8)
     parser.add_argument("--max-output", type=int, default=1024)
+    parser.add_argument("--solvability-checks", action=argparse.BooleanOptionalAction, default=True,
+                        help="Evidence-based feasibility review before solving and after repeated failures")
     parser.add_argument("--limit", type=int, help="Only attempt the first N tasks in the plan")
     parser.add_argument("--time-limit", type=int, default=3300, help="Total wall time in seconds")
     parser.add_argument("--report", type=Path, help="Default: tasks-dir/agent-report.json")

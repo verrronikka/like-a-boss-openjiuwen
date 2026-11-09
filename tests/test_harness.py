@@ -164,7 +164,8 @@ class HarnessTests(unittest.TestCase):
             def do_POST(self):
                 body = json.loads(self.rfile.read(int(self.headers["Content-Length"])))
                 requests.append(body)
-                if len(requests) == 1:
+                reviewing = body["messages"][0]["content"].startswith("Review whether")
+                if len(requests) == 2:
                     name, arguments = "run_python", {"code": "print(6*7)"}
                 else:
                     name, arguments = "submit_answer", {"answer": "42"}
@@ -174,6 +175,10 @@ class HarnessTests(unittest.TestCase):
                     "type": "function", "function": {"name": name, "arguments": json.dumps(arguments)}}]}}],
                     "usage": {"prompt_tokens": 100, "completion_tokens": 20, "total_tokens": 120,
                               "completion_tokens_details": {"reasoning_tokens": 5}}}
+                if reviewing:
+                    payload["choices"][0]["finish_reason"] = "stop"
+                    payload["choices"][0]["message"] = {"role": "assistant", "content": json.dumps(
+                        {"decision": "proceed", "reason": "The arithmetic expression is fully specified"})}
                 data = json.dumps(payload).encode()
                 self.send_response(200)
                 self.send_header("Content-Type", "application/json")
@@ -185,7 +190,7 @@ class HarnessTests(unittest.TestCase):
         thread = threading.Thread(target=server.serve_forever, daemon=True)
         thread.start()
         args = SimpleNamespace(model="qwen3.8-27b-noreason", budget=1000, task_budget=500,
-                               max_output=128, max_steps=4, time_limit=30, report=self.root / "report.json")
+                               max_output=128, max_steps=4, time_limit=30, report=self.root / "report.json", solvability_checks=True)
         try:
             with patch.dict("os.environ", {"LLM_BASE_URL": f"http://127.0.0.1:{server.server_port}/v1",
                                            "LLM_API_KEY": "test-key-not-a-real-credential",
@@ -196,13 +201,15 @@ class HarnessTests(unittest.TestCase):
             server.server_close()
             thread.join(timeout=5)
         self.assertEqual(code, 0, f"requests={len(requests)}; {args.report.read_text(encoding='utf-8')}")
-        self.assertEqual(len(requests), 2)
+        self.assertEqual(len(requests), 3)
         self.assertEqual((self.directory / "answer.txt").read_text().strip(), "42")
         report = json.loads(args.report.read_text(encoding="utf-8"))
-        self.assertEqual(report["spent"], 60)
+        self.assertEqual(report["spent"], 90)
         self.assertEqual(report["results"][0]["status"], "submitted")
-        self.assertEqual(requests[1]["messages"][-1]["role"], "tool")
-        self.assertIn("Remaining overall", requests[1]["messages"][1]["content"])
+        self.assertEqual(requests[2]["messages"][-1]["role"], "tool")
+        self.assertIn("Remaining overall", requests[2]["messages"][1]["content"])
+        self.assertEqual(report["results"][0]["trajectory"][0]["phase"], "feasibility_review")
+        self.assertEqual(requests[0]["response_format"], {"type": "json_object"})
 
 
 if __name__ == "__main__":

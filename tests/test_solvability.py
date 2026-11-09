@@ -24,6 +24,10 @@ class SolvabilityBenchmarkTests(unittest.TestCase):
             self.assertEqual(manifest["dataset_sha256"], second["dataset_sha256"])
             with self.assertRaises(FileExistsError):
                 build(root)
+            heldout = build(Path(folder) / "heldout", suite="heldout")
+            self.assertEqual(len(heldout["cases"]), 12)
+            self.assertEqual(sum(not c["solvable"] for c in heldout["cases"]), 4)
+            self.assertNotEqual(heldout["dataset_sha256"], manifest["dataset_sha256"])
 
     def test_evaluator_distinguishes_skip_from_missing_decision_and_false_answer(self):
         with tempfile.TemporaryDirectory() as folder:
